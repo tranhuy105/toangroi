@@ -1,0 +1,55 @@
+{{ define "content" }}
+<div class="content-header">
+    <h2>{{ .Content.ContentID }} - {{ .Config.Pages.Grammar.Title }}</h2>
+    <div class="content-controls">
+        <button id="show-all-answers" class="button  button-outline">
+            Hiển thị tất cả đáp án
+        </button>
+        <button id="hide-all-answers" class="button button-outline">
+            Hiển thị câu hỏi
+        </button>
+    </div>
+</div>
+
+<div class="grammar-container">
+    {{ range $index, $row := .Content.Rows }}
+    <div class="grammar-question" data-index="{{ $index }}">
+        <div class="question-header">
+            <span class="question-number">{{ index $row "Câu số" }}</span>
+            <h3>{{ index $row "Câu hỏi" }}</h3>
+        </div>
+
+        <div class="answer-options">
+            {{ $options := parseOptions (index $row "Lựa chọn") }}
+            {{ $correctAnswer := index $row "Đáp án đúng" }}
+            {{ range $optIndex, $option := $options }}
+            <div class="answer-option {{ if eq $option $correctAnswer }}correct{{ end }}">
+                <input
+                    type="radio"
+                    name="question-{{ $index }}"
+                    id="q{{ $index }}-opt{{ $optIndex }}"
+                    value="{{ $option }}"
+                />
+                <label for="q{{ $index }}-opt{{ $optIndex }}">{{ $option }}</label>
+            </div>
+            {{ end }}
+        </div>
+
+        <div class="answer-result hidden">
+            <div class="correct-answer">
+                <strong>Đáp án đúng:</strong>
+                <span>{{ $correctAnswer }}</span>
+            </div>
+        </div>
+
+        <div class="question-controls">
+            <button class="check-answer-btn button  button-outline">
+                Kiểm tra đáp án
+            </button>
+        </div>
+    </div>
+    {{ end }}
+</div>
+
+<script src="/static/js/nguphap.js"></script>
+{{ end }} 

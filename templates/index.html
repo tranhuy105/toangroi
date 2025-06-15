@@ -1,0 +1,56 @@
+{{ define "content" }}
+<div class="content-header">
+    <h2>Nội dung học tập</h2>
+</div>
+
+<div class="docs-overview">
+    <p class="docs-welcome">
+        Chào mừng đến với trang học tập Tiếng Nhật! Đây là
+        nơi bạn có thể tìm thấy các bài học ngữ pháp và từ
+        vựng được tổ chức theo từng chủ đề.
+    </p>
+
+    <div class="docs-sections">
+        <div class="docs-section-card">
+            <h3>Từ vựng</h3>
+            <p>
+                Học các từ vựng cơ bản và nâng cao trong
+                Tiếng Nhật
+            </p>
+            <ul class="docs-section-list">
+                {{ range $index, $id := index .ContentMap
+                "tuvung" }}
+                <li>
+                    <a
+                        href="/tuvung/{{ $id }}.html"
+                        class="docs-section-link"
+                    >
+                        {{ $id }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+
+        <div class="docs-section-card">
+            <h3>Ngữ pháp</h3>
+            <p>
+                Các bài học ngữ pháp từ cơ bản đến nâng cao
+            </p>
+            <ul class="docs-section-list">
+                {{ range $index, $id := index .ContentMap
+                "nguphap" }}
+                <li>
+                    <a
+                        href="/nguphap/{{ $id }}.html"
+                        class="docs-section-link"
+                    >
+                        {{ $id }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</div>
+{{ end }}

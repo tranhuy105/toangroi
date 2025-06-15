@@ -1,0 +1,69 @@
+# CAP TOC Configuration
+name: "Toang mẹ rồi"
+
+# Theme configuration
+theme:
+    primary_color: "#2563eb"
+    secondary_color: "#4b5563"
+    text_color: "#111827"
+    text_muted: "#6b7280"
+    background_color: "#ffffff"
+    background_alt: "#f9fafb"
+    border_color: "#e5e7eb"
+    success_color: "#10b981"
+    error_color: "#ef4444"
+    warn_color: "#f59e0b"
+    info_color: "#3b82f6"
+    font: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif"
+
+# Navigation menu
+menu:
+    - label: "Từ vựng"
+      url: "/tuvung/n1_1.html"
+      icon: "book"
+    - label: "Ngữ pháp"
+      url: "/nguphap/so1.html"
+      icon: "pencil"
+
+# Page configuration
+pages:
+    vocabulary:
+        title: "Từ vựng"
+        show_search: true
+        card_layout: "flip" # Options: flip, expand
+        fields:
+            - name: "japanese"
+              label: "Kanji"
+              display: true
+            - name: "reading"
+              label: "Reading"
+              display: true
+            - name: "meaning"
+              label: "Meaning"
+              display: true
+            - name: "sinoVietnamese"
+              label: "Hán Việt"
+              display: true
+
+    grammar:
+        title: "Ngữ pháp"
+        show_result_immediately: false
+        highlight_correct: true
+        fields:
+            - name: "Câu số"
+              label: "Question Number"
+              display: true
+            - name: "Câu hỏi"
+              label: "Question"
+              display: true
+            - name: "Đáp án đúng"
+              label: "Correct Answer"
+              display: false
+            - name: "Lựa chọn"
+              label: "Options"
+              display: true
+
+# Directory paths
+data_dir: "data"
+template_dir: "templates"
+output_dir: "output"

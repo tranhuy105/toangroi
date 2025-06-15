@@ -1,0 +1,56 @@
+{{ define "content" }}
+<div class="content-header">
+    <h2>{{ .Content.ContentID }} - Từ vựng</h2>
+    <div class="content-controls">
+        <button id="toggle-all" class="button">
+            Hiển thị tất cả
+        </button>
+        <button id="hide-all" class="button">
+            Ẩn tất cả
+        </button>
+        <div class="search-box">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Tìm kiếm từ"
+            />
+            <button id="search-button" class="button">
+                Tìm
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="vocabulary-container">
+    {{ range $index, $row := .Content.Rows }}
+    <div class="vocabulary-card" data-index="{{ $index }}">
+        <div class="card-front">
+            <div class="japanese">
+                <span class="kanji"
+                    >{{ index $row "japanese" }}</span
+                >
+                <span class="reading"
+                    >{{ index $row "reading" }}</span
+                >
+            </div>
+            <button class="toggle-button">Xem</button>
+        </div>
+        <div class="card-back hidden">
+            <div class="meaning">
+                {{ index $row "meaning" }}
+            </div>
+            {{ if index $row "sinoVietnamese" }}
+            <div class="sino-vietnamese">
+                <span class="label">Hán Việt:</span>
+                <span class="value"
+                    >{{ index $row "sinoVietnamese" }}</span
+                >
+            </div>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+
+<script src="/static/js/tuvung.js"></script>
+{{ end }}

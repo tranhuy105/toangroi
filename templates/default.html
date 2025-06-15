@@ -1,0 +1,68 @@
+{{ define "content" }}
+<div class="content-header">
+    <h2>
+        {{ .Content.ContentID }} - {{ .Content.ContentType
+        }}
+    </h2>
+</div>
+
+<div class="default-container">
+    <div class="data-table">
+        <table>
+            <thead>
+                <tr>
+                    {{ range .Content.Headers }}
+                    <th>{{ . }}</th>
+                    {{ end }}
+                </tr>
+            </thead>
+            <tbody>
+                {{ range .Content.Rows }}
+                <tr>
+                    {{ $row := . }} {{ range
+                    $.Content.Headers }}
+                    <td>{{ index $row . }}</td>
+                    {{ end }}
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="raw-data">
+        <h3>Raw Data</h3>
+        <pre>{{ .Content.RawData }}</pre>
+    </div>
+</div>
+
+<style>
+    .default-container {
+        margin-bottom: 2rem;
+    }
+
+    .data-table {
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid var(--card-border);
+        padding: 8px 12px;
+        text-align: left;
+    }
+
+    th {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    tr:nth-child(even) {
+        background-color: var(--card-background);
+    }
+</style>
+{{ end }}
