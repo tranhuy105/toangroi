@@ -10,6 +10,8 @@ import (
 type Config struct {
 	// Name of the website
 	Name string `yaml:"name"`
+	// Base URL for the website (for GitHub Pages or other deployments)
+	BaseURL string `yaml:"base_url"`
 	// Theme configuration
 	Theme ThemeConfig `yaml:"theme"`
 	// Navigation menu items
@@ -102,6 +104,7 @@ type FieldConfig struct {
 func DefaultConfig() *Config {
 	cfg := &Config{
 		Name:        "CAP TOC Learning Materials",
+		BaseURL:     "", // Empty string for local development
 		DataDir:     "data",
 		TemplateDir: "templates",
 		OutputDir:   "output",

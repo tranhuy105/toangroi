@@ -10,7 +10,7 @@
         <title>{{ .Title }}</title>
         <link
             rel="stylesheet"
-            href="/static/css/style.css"
+            href="{{ .Config.BaseURL }}/static/css/style.css"
         />
         <style>
             :root {
@@ -32,7 +32,7 @@
             }
         </style>
         <!-- Include any additional CSS or JS files -->
-        <script src="/static/js/main.js" defer></script>
+        <script src="{{ .Config.BaseURL }}/static/js/main.js" defer></script>
     </head>
     <body>
         <header>
@@ -43,18 +43,18 @@
                 <nav class="main-nav">
                     <ul>
                         <li class="{{ if and .Content (eq .Content.ContentID "index") }}active{{ end }}">
-                            <a href="/index.html">Home</a>
+                            <a href="{{ .Config.BaseURL }}/index.html">Home</a>
                         </li>
                         {{ range .Menu }}
                         <li class="dropdown">
-                            <a href="{{ .URL }}"
+                            <a href="{{ $.Config.BaseURL }}{{ .URL }}"
                                 >{{ .Label }}</a
                             >
                             {{ if .Children }}
                             <ul class="dropdown-menu">
                                 {{ range .Children }}
                                 <li>
-                                    <a href="{{ .URL }}"
+                                    <a href="{{ $.Config.BaseURL }}{{ .URL }}"
                                         >{{ .Label }}</a
                                     >
                                 </li>
@@ -82,7 +82,7 @@
                                         {{ range $index, $id := index .ContentMap "tuvung" }}
                                         <li>
                                             <a 
-                                                href="/tuvung/{{ $id }}.html" 
+                                                href="{{ $.Config.BaseURL }}/tuvung/{{ $id }}.html" 
                                                 class="docs-sidebar-link {{ if and $.Content (eq $.Content.ContentID $id) }}active{{ end }}"
                                             >
                                                 {{ $id }}
@@ -91,7 +91,7 @@
                                         {{ end }}
                                     {{ else }}
                                         <li>
-                                            <a href="/tuvung/so1.html" class="docs-sidebar-link">
+                                            <a href="{{ $.Config.BaseURL }}/tuvung/so1.html" class="docs-sidebar-link">
                                                 Từ vựng
                                             </a>
                                         </li>
@@ -108,7 +108,7 @@
                                         {{ range $index, $id := index .ContentMap "nguphap" }}
                                         <li>
                                             <a 
-                                                href="/nguphap/{{ $id }}.html" 
+                                                href="{{ $.Config.BaseURL }}/nguphap/{{ $id }}.html" 
                                                 class="docs-sidebar-link {{ if and $.Content (eq $.Content.ContentID $id) }}active{{ end }}"
                                             >
                                                 {{ $id }}
@@ -117,7 +117,7 @@
                                         {{ end }}
                                     {{ else }}
                                         <li>
-                                            <a href="/nguphap/so1.html" class="docs-sidebar-link">
+                                            <a href="{{ $.Config.BaseURL }}/nguphap/so1.html" class="docs-sidebar-link">
                                                 Ngữ pháp
                                             </a>
                                         </li>

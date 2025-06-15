@@ -1,6 +1,8 @@
 # CAP TOC Configuration
 name: "Toang mẹ rồi"
 
+base_url: "/toangroi"
+
 # Theme configuration
 theme:
     primary_color: "#2563eb"
@@ -66,4 +68,4 @@ pages:
 # Directory paths
 data_dir: "data"
 template_dir: "templates"
-output_dir: "output"
+output_dir: "docs"

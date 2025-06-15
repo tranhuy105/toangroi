@@ -33,14 +33,14 @@ func RenderTemplate(contentType string, data *parser.ContentData, outputPath str
 	// Select template file based on content type
 	templateFile := filepath.Join(cfg.TemplateDir, contentType+".html")
 	goTemplateFile := filepath.Join(cfg.TemplateDir, contentType+".gohtml")
-	layoutFile := filepath.Join(cfg.TemplateDir, "layout.html")
+	layoutFile := filepath.Join(cfg.TemplateDir, "layout.gohtml")
 	
 	// Check if the template file exists, first with .gohtml extension then with .html
 	if _, err := os.Stat(goTemplateFile); err == nil {
 		templateFile = goTemplateFile
 	} else if _, err := os.Stat(templateFile); os.IsNotExist(err) {
 		fmt.Printf("Template file %s not found, falling back to default\n", templateFile)
-		templateFile = filepath.Join(cfg.TemplateDir, "default.html")
+		templateFile = filepath.Join(cfg.TemplateDir, "default.gohtml")
 		// If default template doesn't exist either, return an error
 		if _, err := os.Stat(templateFile); os.IsNotExist(err) {
 			return fmt.Errorf("no template found for content type: %s and default template missing", contentType)
@@ -95,8 +95,8 @@ func RenderTemplate(contentType string, data *parser.ContentData, outputPath str
 // RenderIndex generates the index page
 func RenderIndex(cfg *config.Config) error {
 	// Load index template
-	indexFile := filepath.Join(cfg.TemplateDir, "index.html")
-	layoutFile := filepath.Join(cfg.TemplateDir, "layout.html")
+	indexFile := filepath.Join(cfg.TemplateDir, "index.gohtml")
+	layoutFile := filepath.Join(cfg.TemplateDir, "layout.gohtml")
 
 	// Check if template exists
 	if _, err := os.Stat(indexFile); os.IsNotExist(err) {

@@ -88,9 +88,16 @@ func build() {
 }
 
 func preview() {
+	// Load configuration
+	cfg, err := config.Load("config.yaml")
+	if err != nil {
+		fmt.Printf("Error loading config: %v\n", err)
+		os.Exit(1)
+	}
+
 	fmt.Println("Starting local preview server...")
 	// Check if output directory exists
-	if _, err := os.Stat("output"); os.IsNotExist(err) {
+	if _, err := os.Stat(cfg.OutputDir); os.IsNotExist(err) {
 		fmt.Println("Output directory doesn't exist. Running build first...")
 		build()
 	}
@@ -98,7 +105,7 @@ func preview() {
 	// Start a simple HTTP server
 	fmt.Println("Server started at http://localhost:8080")
 	fmt.Println("Press Ctrl+C to stop")
-	err := startServer("output", 8080)
+	err = startServer(cfg.OutputDir, 8080)
 	if err != nil {
 		fmt.Printf("Error starting server: %v\n", err)
 		os.Exit(1)
@@ -106,8 +113,15 @@ func preview() {
 }
 
 func clean() {
+	// Load configuration
+	cfg, err := config.Load("config.yaml")
+	if err != nil {
+		fmt.Printf("Error loading config: %v\n", err)
+		os.Exit(1)
+	}
+
 	fmt.Println("Cleaning output directory...")
-	if err := os.RemoveAll("output"); err != nil {
+	if err := os.RemoveAll(cfg.OutputDir); err != nil {
 		fmt.Printf("Error cleaning output directory: %v\n", err)
 		os.Exit(1)
 	}
