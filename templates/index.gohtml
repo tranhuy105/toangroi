@@ -3,49 +3,61 @@
     <h2>Nội dung học tập</h2>
 </div>
 
-<div class="docs-overview">
-    <p class="docs-welcome">
-        Chào mừng đến với trang học tập Tiếng Nhật! Đây là
-        nơi bạn có thể tìm thấy các bài học ngữ pháp và từ
-        vựng được tổ chức theo từng chủ đề.
-    </p>
+<div class="hero-section">
+    <div class="hero-content">
+        <h3 class="hero-title">Chào mừng đến với trang học tập Tiếng Nhật!</h3>
+        <p class="hero-text">
+            Đây là nơi bạn có thể tìm thấy các bài học ngữ pháp và từ
+            vựng được tổ chức theo từng chủ đề. Tài liệu được thiết kế
+            để giúp bạn học hiệu quả và dễ dàng ôn tập.
+        </p>
+    </div>
+</div>
 
-    <div class="docs-sections">
-        <div class="docs-section-card">
-            <h3>Từ vựng</h3>
-            <p>
-                Học các từ vựng cơ bản và nâng cao trong
-                Tiếng Nhật
+<div class="content-grid">
+    <div class="content-card">
+        <div class="card-header">
+            <h3 class="card-title">
+                <span class="card-icon">📚</span>
+                Từ vựng
+            </h3>
+        </div>
+        <div class="card-body">
+            <p class="card-description">
+                Học các từ vựng cơ bản và nâng cao trong Tiếng Nhật.
+                Mỗi bài học đều có thẻ từ vựng với cách đọc và nghĩa.
             </p>
-            <ul class="docs-section-list">
-                {{ range $index, $id := index .ContentMap
-                "tuvung" }}
-                <li>
-                    <a
-                        href="{{ $.Config.BaseURL }}/tuvung/{{ $id }}.html"
-                        class="docs-section-link"
-                    >
-                        {{ $id }}
+            <ul class="content-list">
+                {{ range $index, $id := index .ContentMap "tuvung" }}
+                <li class="content-item">
+                    <a href="{{ $.Config.BaseURL }}/tuvung/{{ $id }}.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>{{ $id }}</span>
                     </a>
                 </li>
                 {{ end }}
             </ul>
         </div>
+    </div>
 
-        <div class="docs-section-card">
-            <h3>Ngữ pháp</h3>
-            <p>
-                Các bài học ngữ pháp từ cơ bản đến nâng cao
+    <div class="content-card">
+        <div class="card-header">
+            <h3 class="card-title">
+                <span class="card-icon">🖋️</span>
+                Ngữ pháp
+            </h3>
+        </div>
+        <div class="card-body">
+            <p class="card-description">
+                Các bài học ngữ pháp từ cơ bản đến nâng cao.
+                Mỗi bài học đều có ví dụ và bài tập để giúp bạn hiểu rõ hơn.
             </p>
-            <ul class="docs-section-list">
-                {{ range $index, $id := index .ContentMap
-                "nguphap" }}
-                <li>
-                    <a
-                        href="{{ $.Config.BaseURL }}/nguphap/{{ $id }}.html"
-                        class="docs-section-link"
-                    >
-                        {{ $id }}
+            <ul class="content-list">
+                {{ range $index, $id := index .ContentMap "nguphap" }}
+                <li class="content-item">
+                    <a href="{{ $.Config.BaseURL }}/nguphap/{{ $id }}.html" class="content-link">
+                        <span class="content-icon">📝</span>
+                        <span>{{ $id }}</span>
                     </a>
                 </li>
                 {{ end }}

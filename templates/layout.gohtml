@@ -12,6 +12,10 @@
             rel="stylesheet"
             href="{{ .Config.BaseURL }}/static/css/style.css"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <meta name="theme-color" content="{{ .Config.Theme.PrimaryColor }}">
         <style>
             :root {
                 --primary-color: {
@@ -35,63 +39,78 @@
         <script src="{{ .Config.BaseURL }}/static/js/main.js" defer></script>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <h1 class="site-title">
-                    {{ .Config.Name }}
-                </h1>
-                <nav class="main-nav">
-                    <ul>
-                        <li class="{{ if and .Content (eq .Content.ContentID "index") }}active{{ end }}">
-                            <a href="{{ .Config.BaseURL }}/index.html">Home</a>
-                        </li>
-                        {{ range .Menu }}
-                        <li class="dropdown">
-                            <a href="{{ $.Config.BaseURL }}{{ .URL }}"
-                                >{{ .Label }}</a
-                            >
-                            {{ if .Children }}
-                            <ul class="dropdown-menu">
-                                {{ range .Children }}
-                                <li>
-                                    <a href="{{ $.Config.BaseURL }}{{ .URL }}"
-                                        >{{ .Label }}</a
-                                    >
+        <div class="app-container">
+            <header class="header">
+                <div class="header-container">
+                    <div class="header-logo">
+                        <a href="{{ .Config.BaseURL }}/index.html" class="logo-link">
+                            <h1 class="site-title">{{ .Config.Name }}</h1>
+                        </a>
+                    </div>
+                    
+                    <div class="header-nav">
+                        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle menu">
+                            <span class="menu-icon"></span>
+                        </button>
+                        
+                        <nav class="main-nav">
+                            <ul class="nav-list">
+                                <li class="nav-item {{ if and .Content (eq .Content.ContentID "index") }}active{{ end }}">
+                                    <a href="{{ .Config.BaseURL }}/index.html" class="nav-link">Trang chủ</a>
+                                </li>
+                                {{ range .Menu }}
+                                <li class="nav-item dropdown">
+                                    <a href="{{ $.Config.BaseURL }}{{ .URL }}" class="nav-link">
+                                        {{ .Label }}
+                                        <span class="dropdown-icon">▾</span>
+                                    </a>
+                                    {{ if .Children }}
+                                    <ul class="dropdown-menu">
+                                        {{ range .Children }}
+                                        <li class="dropdown-item">
+                                            <a href="{{ $.Config.BaseURL }}{{ .URL }}" class="dropdown-link">
+                                                {{ .Label }}
+                                            </a>
+                                        </li>
+                                        {{ end }}
+                                    </ul>
+                                    {{ end }}
                                 </li>
                                 {{ end }}
                             </ul>
-                            {{ end }}
-                        </li>
-                        {{ end }}
-                    </ul>
-                </nav>
-            </div>
-        </header>
+                        </nav>
 
-        <main>
-            <div class="container docs-container">
-                <div class="docs-sidebar">
-                    <nav class="docs-sidebar-nav">
-                        <h3 class="docs-sidebar-title">Content Type</h3>
-                        
-                        <div class="docs-sidebar-group">
-                            <h4 class="docs-sidebar-group-title">Từ vựng</h4>
-                            <ul class="docs-sidebar-list">
+                        <div class="theme-toggle">
+                            <button id="theme-toggle-btn" aria-label="Toggle dark mode">
+                                <span class="light-icon">☀️</span>
+                                <span class="dark-icon">🌙</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <aside class="sidebar">
+                    <nav class="sidebar-nav">
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-title">Từ vựng</h3>
+                            <ul class="sidebar-list">
                                 {{ if .ContentMap }}
                                     {{ if index .ContentMap "tuvung" }}
                                         {{ range $index, $id := index .ContentMap "tuvung" }}
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
                                                 href="{{ $.Config.BaseURL }}/tuvung/{{ $id }}.html" 
-                                                class="docs-sidebar-link {{ if and $.Content (eq $.Content.ContentID $id) }}active{{ end }}"
+                                                class="sidebar-link {{ if and $.Content (eq $.Content.ContentID $id) }}active{{ end }}"
                                             >
                                                 {{ $id }}
                                             </a>
                                         </li>
                                         {{ end }}
                                     {{ else }}
-                                        <li>
-                                            <a href="{{ $.Config.BaseURL }}/tuvung/so1.html" class="docs-sidebar-link">
+                                        <li class="sidebar-item">
+                                            <a href="{{ $.Config.BaseURL }}/tuvung/so1.html" class="sidebar-link">
                                                 Từ vựng
                                             </a>
                                         </li>
@@ -100,24 +119,24 @@
                             </ul>
                         </div>
                         
-                        <div class="docs-sidebar-group">
-                            <h4 class="docs-sidebar-group-title">Ngữ pháp</h4>
-                            <ul class="docs-sidebar-list">
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-title">Ngữ pháp</h3>
+                            <ul class="sidebar-list">
                                 {{ if .ContentMap }}
                                     {{ if index .ContentMap "nguphap" }}
                                         {{ range $index, $id := index .ContentMap "nguphap" }}
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
                                                 href="{{ $.Config.BaseURL }}/nguphap/{{ $id }}.html" 
-                                                class="docs-sidebar-link {{ if and $.Content (eq $.Content.ContentID $id) }}active{{ end }}"
+                                                class="sidebar-link {{ if and $.Content (eq $.Content.ContentID $id) }}active{{ end }}"
                                             >
                                                 {{ $id }}
                                             </a>
                                         </li>
                                         {{ end }}
                                     {{ else }}
-                                        <li>
-                                            <a href="{{ $.Config.BaseURL }}/nguphap/so1.html" class="docs-sidebar-link">
+                                        <li class="sidebar-item">
+                                            <a href="{{ $.Config.BaseURL }}/nguphap/so1.html" class="sidebar-link">
                                                 Ngữ pháp
                                             </a>
                                         </li>
@@ -126,25 +145,23 @@
                             </ul>
                         </div>
                     </nav>
-                </div>
-            
-                <div class="docs-content">
+                </aside>
+                
+                <div class="content">
                     {{ block "content" . }}
                     <!-- Content will be inserted here by child templates -->
                     {{ end }}
                 </div>
-            </div>
-        </main>
+            </main>
 
-        <footer>
-            <div class="container">
-                <p>
-                    &copy; {{ .Timestamp | formatYear }} {{
-                    .Config.Name }} - Generated on {{
-                    .Timestamp }}
-                </p>
-            </div>
-        </footer>
+            <footer class="footer">
+                <div class="footer-container">
+                    <p class="copyright">
+                        &copy; {{ .Timestamp | formatYear }} {{ .Config.Name }} - Generated on {{ .Timestamp }}
+                    </p>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>
 {{ end }}

@@ -10,8 +10,12 @@
         <title>Toang mẹ rồi - n1_11</title>
         <link
             rel="stylesheet"
-            href="/toangroi/static/css/style.css"
+            href="/static/css/style.css"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <meta name="theme-color" content="#2563eb">
         <style>
             :root {
                 --primary-color: {
@@ -32,235 +36,251 @@
             }
         </style>
         
-        <script src="/toangroi/static/js/main.js" defer></script>
+        <script src="/static/js/main.js" defer></script>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <h1 class="site-title">
-                    Toang mẹ rồi
-                </h1>
-                <nav class="main-nav">
-                    <ul>
-                        <li class="">
-                            <a href="/toangroi/index.html">Home</a>
-                        </li>
+        <div class="app-container">
+            <header class="header">
+                <div class="header-container">
+                    <div class="header-logo">
+                        <a href="/index.html" class="logo-link">
+                            <h1 class="site-title">Toang mẹ rồi</h1>
+                        </a>
+                    </div>
+                    
+                    <div class="header-nav">
+                        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle menu">
+                            <span class="menu-icon"></span>
+                        </button>
                         
-                        <li class="dropdown">
-                            <a href="/toangroi/tuvung/n1_1.html"
-                                >Từ vựng</a
-                            >
-                            
-                        </li>
-                        
-                        <li class="dropdown">
-                            <a href="/toangroi/nguphap/so1.html"
-                                >Ngữ pháp</a
-                            >
-                            
-                        </li>
-                        
-                    </ul>
-                </nav>
-            </div>
-        </header>
+                        <nav class="main-nav">
+                            <ul class="nav-list">
+                                <li class="nav-item ">
+                                    <a href="/index.html" class="nav-link">Trang chủ</a>
+                                </li>
+                                
+                                <li class="nav-item dropdown">
+                                    <a href="/tuvung/n1_1.html" class="nav-link">
+                                        Từ vựng
+                                        <span class="dropdown-icon">▾</span>
+                                    </a>
+                                    
+                                </li>
+                                
+                                <li class="nav-item dropdown">
+                                    <a href="/nguphap/so1.html" class="nav-link">
+                                        Ngữ pháp
+                                        <span class="dropdown-icon">▾</span>
+                                    </a>
+                                    
+                                </li>
+                                
+                            </ul>
+                        </nav>
 
-        <main>
-            <div class="container docs-container">
-                <div class="docs-sidebar">
-                    <nav class="docs-sidebar-nav">
-                        <h3 class="docs-sidebar-title">Content Type</h3>
-                        
-                        <div class="docs-sidebar-group">
-                            <h4 class="docs-sidebar-group-title">Từ vựng</h4>
-                            <ul class="docs-sidebar-list">
+                        <div class="theme-toggle">
+                            <button id="theme-toggle-btn" aria-label="Toggle dark mode">
+                                <span class="light-icon">☀️</span>
+                                <span class="dark-icon">🌙</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <aside class="sidebar">
+                    <nav class="sidebar-nav">
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-title">Từ vựng</h3>
+                            <ul class="sidebar-list">
                                 
                                     
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_1.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_1.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_1
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_10.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_10.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_10
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_11.html" 
-                                                class="docs-sidebar-link active"
+                                                href="/tuvung/n1_11.html" 
+                                                class="sidebar-link active"
                                             >
                                                 n1_11
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_12.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_12.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_12
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_2.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_2.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_2
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_3.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_3.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_3
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_4.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_4.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_4
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_5.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_5.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_5
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_6.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_6.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_6
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_7.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_7.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_7
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_8.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_8.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_8
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_9.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_9.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_9
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_1.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_1.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_1
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_10.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_10.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_10
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_12.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_12.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_12
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_2.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_2.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_2
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_3.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_3.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_3
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_4.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_4.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_4
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_5.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_5.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_5
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_7.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_7.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_7
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_8.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_8.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_8
                                             </a>
@@ -271,70 +291,70 @@
                             </ul>
                         </div>
                         
-                        <div class="docs-sidebar-group">
-                            <h4 class="docs-sidebar-group-title">Ngữ pháp</h4>
-                            <ul class="docs-sidebar-list">
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-title">Ngữ pháp</h3>
+                            <ul class="sidebar-list">
                                 
                                     
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so1.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so1.html" 
+                                                class="sidebar-link "
                                             >
                                                 so1
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so2.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so2.html" 
+                                                class="sidebar-link "
                                             >
                                                 so2
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so3.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so3.html" 
+                                                class="sidebar-link "
                                             >
                                                 so3
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so4.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so4.html" 
+                                                class="sidebar-link "
                                             >
                                                 so4
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so5.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so5.html" 
+                                                class="sidebar-link "
                                             >
                                                 so5
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so6.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so6.html" 
+                                                class="sidebar-link "
                                             >
                                                 so6
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so7.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so7.html" 
+                                                class="sidebar-link "
                                             >
                                                 so7
                                             </a>
@@ -345,27 +365,27 @@
                             </ul>
                         </div>
                     </nav>
-                </div>
-            
-                <div class="docs-content">
+                </aside>
+                
+                <div class="content">
                     
 <div class="content-header">
     <h2>n1_11 - Từ vựng</h2>
     <div class="content-controls">
-        <button id="toggle-all" class="button">
-            Hiển thị tất cả
-        </button>
-        <button id="hide-all" class="button">
-            Ẩn tất cả
-        </button>
         <div class="search-box">
+            <span class="search-icon">🔍</span>
             <input
                 type="text"
                 id="search-input"
-                placeholder="Tìm kiếm từ"
+                placeholder="Tìm kiếm từ..."
             />
-            <button id="search-button" class="button">
-                Tìm
+        </div>
+        <div class="button-group">
+            <button id="toggle-all" class="button button-primary">
+                <span class="icon">👁️</span> Hiển thị tất cả
+            </button>
+            <button id="hide-all" class="button button-secondary">
+                <span class="icon">👁️‍🗨️</span> Ẩn tất cả
             </button>
         </div>
     </div>
@@ -376,94 +396,101 @@
     <div class="vocabulary-card" data-index="0">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >ひたすら</span
-                >
-                <span class="reading"
-                    >ひたすら</span
-                >
+                <span class="kanji">ひたすら</span>
+                <span class="reading">ひたすら</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Chỉ, hơn
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="1">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >あくまで</span
-                >
-                <span class="reading"
-                    >あくまで</span
-                >
+                <span class="kanji">あくまで</span>
+                <span class="reading">あくまで</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Kiên trì, tới cùng
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="2">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >めっきり</span
-                >
-                <span class="reading"
-                    >めっきり</span
-                >
+                <span class="kanji">めっきり</span>
+                <span class="reading">めっきり</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 đáng kể, rõ rệt, khá
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="3">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >かろうじて</span
-                >
-                <span class="reading"
-                    >かろうじて</span
-                >
+                <span class="kanji">かろうじて</span>
+                <span class="reading">かろうじて</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Xém, suýt soátkhó khăn lắm mới
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="4">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >敢えて</span
-                >
-                <span class="reading"
-                    >あえて</span
-                >
+                <span class="kanji">敢えて</span>
+                <span class="reading">あえて</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -472,145 +499,157 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >CẢM</span
-                >
+                <span class="value">CẢM</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="5">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >あわや</span
-                >
-                <span class="reading"
-                    >あわや</span
-                >
+                <span class="kanji">あわや</span>
+                <span class="reading">あわや</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Trong một thoáng, suýt
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="6">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >もろに</span
-                >
-                <span class="reading"
-                    >もろに</span
-                >
+                <span class="kanji">もろに</span>
+                <span class="reading">もろに</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Trực tiếpHoàn toàn
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="7">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >いやに</span
-                >
-                <span class="reading"
-                    >いやに</span
-                >
+                <span class="kanji">いやに</span>
+                <span class="reading">いやに</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Rất, kinh khủng
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="8">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >やけに</span
-                >
-                <span class="reading"
-                    >やけに</span
-                >
+                <span class="kanji">やけに</span>
+                <span class="reading">やけに</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Quá, kinh khủng
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="9">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >むやみに</span
-                >
-                <span class="reading"
-                    >むやみに</span
-                >
+                <span class="kanji">むやみに</span>
+                <span class="reading">むやみに</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Ngẫu nhiên, quá mức
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="10">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >やたらに</span
-                >
-                <span class="reading"
-                    >やたらに</span
-                >
+                <span class="kanji">やたらに</span>
+                <span class="reading">やたらに</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Quá mức, vô cùng , thiếu thận trọng
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="11">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >何しろ</span
-                >
-                <span class="reading"
-                    >なにしろ</span
-                >
+                <span class="kanji">何しろ</span>
+                <span class="reading">なにしろ</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -619,25 +658,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >HÀ</span
-                >
+                <span class="value">HÀ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="12">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >専ら</span
-                >
-                <span class="reading"
-                    >もっぱら</span
-                >
+                <span class="kanji">専ら</span>
+                <span class="reading">もっぱら</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -646,25 +685,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >CHUYÊN</span
-                >
+                <span class="value">CHUYÊN</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="13">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >一応</span
-                >
-                <span class="reading"
-                    >いちおう</span
-                >
+                <span class="kanji">一応</span>
+                <span class="reading">いちおう</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -673,25 +712,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >NHẤT ỨNG</span
-                >
+                <span class="value">NHẤT ỨNG</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="14">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >一旦</span
-                >
-                <span class="reading"
-                    >いったん</span
-                >
+                <span class="kanji">一旦</span>
+                <span class="reading">いったん</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -700,45 +739,47 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >NHẤT ĐÁN</span
-                >
+                <span class="value">NHẤT ĐÁN</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="15">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >ひとまず</span
-                >
-                <span class="reading"
-                    >ひとまず</span
-                >
+                <span class="kanji">ひとまず</span>
+                <span class="reading">ひとまず</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Trong lúc này, hiện giờTrước tiên, tạm thời
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="16">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >追って</span
-                >
-                <span class="reading"
-                    >おって</span
-                >
+                <span class="kanji">追って</span>
+                <span class="reading">おって</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -747,25 +788,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >TRUY</span
-                >
+                <span class="value">TRUY</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="17">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >現に</span
-                >
-                <span class="reading"
-                    >げんに</span
-                >
+                <span class="kanji">現に</span>
+                <span class="reading">げんに</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -774,25 +815,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >HIỆN</span
-                >
+                <span class="value">HIỆN</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="18">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >言わば</span
-                >
-                <span class="reading"
-                    >いわば</span
-                >
+                <span class="kanji">言わば</span>
+                <span class="reading">いわば</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -801,45 +842,47 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >NGÔN</span
-                >
+                <span class="value">NGÔN</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="19">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >いかに</span
-                >
-                <span class="reading"
-                    >いかに</span
-                >
+                <span class="kanji">いかに</span>
+                <span class="reading">いかに</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Đến mức nào, đến thế nàoNhư thế nào, thế nào, biết bao nhiêu
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="20">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >一律に</span
-                >
-                <span class="reading"
-                    >いちりつに</span
-                >
+                <span class="kanji">一律に</span>
+                <span class="reading">いちりつに</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -848,25 +891,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >NHẤT LUẬT</span
-                >
+                <span class="value">NHẤT LUẬT</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="21">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >各々</span
-                >
-                <span class="reading"
-                    >おのおの</span
-                >
+                <span class="kanji">各々</span>
+                <span class="reading">おのおの</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -875,65 +918,69 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >CÁC</span
-                >
+                <span class="value">CÁC</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="22">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >もはや</span
-                >
-                <span class="reading"
-                    >もはや</span
-                >
+                <span class="kanji">もはや</span>
+                <span class="reading">もはや</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Đã, rồi
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="23">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >ともすれば</span
-                >
-                <span class="reading"
-                    >ともれるば</span
-                >
+                <span class="kanji">ともすれば</span>
+                <span class="reading">ともれるば</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Có khuynh hướng Dễ bị, chịu trách nhiệm
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="24">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >依然として</span
-                >
-                <span class="reading"
-                    >いぜんとして</span
-                >
+                <span class="kanji">依然として</span>
+                <span class="reading">いぜんとして</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -942,25 +989,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >Ỷ NHIÊN</span
-                >
+                <span class="value">Ỷ NHIÊN</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="25">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >漠然と</span
-                >
-                <span class="reading"
-                    >ばくぜんと</span
-                >
+                <span class="kanji">漠然と</span>
+                <span class="reading">ばくぜんと</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -969,85 +1016,91 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >MẠC NHIÊN</span
-                >
+                <span class="value">MẠC NHIÊN</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="26">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >まして</span
-                >
-                <span class="reading"
-                    >まして</span
-                >
+                <span class="kanji">まして</span>
+                <span class="reading">まして</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Huống chi, đương nhiên là
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="27">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >なおさら</span
-                >
-                <span class="reading"
-                    >なおさら</span
-                >
+                <span class="kanji">なおさら</span>
+                <span class="reading">なおさら</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Hơn nữa, càng thêm
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="28">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >ひいては</span
-                >
-                <span class="reading"
-                    >ひいては</span
-                >
+                <span class="kanji">ひいては</span>
+                <span class="reading">ひいては</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Do đó, vì vậy cho nên, bởi thế, vậy thì
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="29">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >お自ずから</span
-                >
-                <span class="reading"
-                    >おのずから</span
-                >
+                <span class="kanji">お自ずから</span>
+                <span class="reading">おのずから</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1056,25 +1109,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >TỰ</span
-                >
+                <span class="value">TỰ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="30">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >明くる</span
-                >
-                <span class="reading"
-                    >あくる</span
-                >
+                <span class="kanji">明くる</span>
+                <span class="reading">あくる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1083,25 +1136,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >MINH</span
-                >
+                <span class="value">MINH</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="31">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >来る</span
-                >
-                <span class="reading"
-                    >きたる</span
-                >
+                <span class="kanji">来る</span>
+                <span class="reading">きたる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1110,25 +1163,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >LAI</span
-                >
+                <span class="value">LAI</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="32">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >去る</span
-                >
-                <span class="reading"
-                    >さる</span
-                >
+                <span class="kanji">去る</span>
+                <span class="reading">さる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1137,25 +1190,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >KHỨ</span
-                >
+                <span class="value">KHỨ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="33">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >例の</span
-                >
-                <span class="reading"
-                    >れいの</span
-                >
+                <span class="kanji">例の</span>
+                <span class="reading">れいの</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1164,45 +1217,47 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >LỆ</span
-                >
+                <span class="value">LỆ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="34">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >ありとあらゆる</span
-                >
-                <span class="reading"
-                    >ありとあらゆる</span
-                >
+                <span class="kanji">ありとあらゆる</span>
+                <span class="reading">ありとあらゆる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Từng, mỗi, tất cả, mọi thứ (phương pháp)
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="35">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >作用</span
-                >
-                <span class="reading"
-                    >さよう</span
-                >
+                <span class="kanji">作用</span>
+                <span class="reading">さよう</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1211,25 +1266,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >TÁC DỤNG</span
-                >
+                <span class="value">TÁC DỤNG</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="36">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >依存</span
-                >
-                <span class="reading"
-                    >いぞん</span
-                >
+                <span class="kanji">依存</span>
+                <span class="reading">いぞん</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1238,25 +1293,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >Ỷ TỒN</span
-                >
+                <span class="value">Ỷ TỒN</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="37">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >解消</span
-                >
-                <span class="reading"
-                    >かいしょう</span
-                >
+                <span class="kanji">解消</span>
+                <span class="reading">かいしょう</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1265,25 +1320,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >GIẢI TIÊU</span
-                >
+                <span class="value">GIẢI TIÊU</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="38">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >促進</span
-                >
-                <span class="reading"
-                    >そくしん</span
-                >
+                <span class="kanji">促進</span>
+                <span class="reading">そくしん</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1292,25 +1347,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >XÚC TIẾN</span
-                >
+                <span class="value">XÚC TIẾN</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="39">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >意向</span
-                >
-                <span class="reading"
-                    >いこう</span
-                >
+                <span class="kanji">意向</span>
+                <span class="reading">いこう</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1319,25 +1374,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >Ý HƯỚNG</span
-                >
+                <span class="value">Ý HƯỚNG</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="40">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >意図</span
-                >
-                <span class="reading"
-                    >いと</span
-                >
+                <span class="kanji">意図</span>
+                <span class="reading">いと</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1346,25 +1401,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >Ý ĐỒ</span
-                >
+                <span class="value">Ý ĐỒ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="41">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >向上</span
-                >
-                <span class="reading"
-                    >こうじょう</span
-                >
+                <span class="kanji">向上</span>
+                <span class="reading">こうじょう</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1373,25 +1428,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >HƯỚNG THƯỢNG</span
-                >
+                <span class="value">HƯỚNG THƯỢNG</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="42">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >活気</span
-                >
-                <span class="reading"
-                    >かっき</span
-                >
+                <span class="kanji">活気</span>
+                <span class="reading">かっき</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1400,25 +1455,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >HOẠT KHÍ</span
-                >
+                <span class="value">HOẠT KHÍ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="43">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >迫力</span
-                >
-                <span class="reading"
-                    >はくりょく</span
-                >
+                <span class="kanji">迫力</span>
+                <span class="reading">はくりょく</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1427,25 +1482,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >BÁCH LỰC</span
-                >
+                <span class="value">BÁCH LỰC</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="44">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >勝利</span
-                >
-                <span class="reading"
-                    >しょうり</span
-                >
+                <span class="kanji">勝利</span>
+                <span class="reading">しょうり</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1454,25 +1509,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >THẮNG LỢI</span
-                >
+                <span class="value">THẮNG LỢI</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="45">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >適応</span
-                >
-                <span class="reading"
-                    >てきおう</span
-                >
+                <span class="kanji">適応</span>
+                <span class="reading">てきおう</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1481,25 +1536,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >THÍCH ỨNG</span
-                >
+                <span class="value">THÍCH ỨNG</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="46">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >調和</span
-                >
-                <span class="reading"
-                    >ちょうわ</span
-                >
+                <span class="kanji">調和</span>
+                <span class="reading">ちょうわ</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1508,25 +1563,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >ĐIỀU HÒA</span
-                >
+                <span class="value">ĐIỀU HÒA</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="47">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >権力</span
-                >
-                <span class="reading"
-                    >けんりょく</span
-                >
+                <span class="kanji">権力</span>
+                <span class="reading">けんりょく</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1535,25 +1590,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >QUYỀN LỰC</span
-                >
+                <span class="value">QUYỀN LỰC</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="48">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >権威</span
-                >
-                <span class="reading"
-                    >けんい</span
-                >
+                <span class="kanji">権威</span>
+                <span class="reading">けんい</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1562,25 +1617,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >QUYỀN UY</span
-                >
+                <span class="value">QUYỀN UY</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="49">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >圧迫</span
-                >
-                <span class="reading"
-                    >あっぱく</span
-                >
+                <span class="kanji">圧迫</span>
+                <span class="reading">あっぱく</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1589,25 +1644,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >ÁP BÁCH</span
-                >
+                <span class="value">ÁP BÁCH</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="50">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >強制</span
-                >
-                <span class="reading"
-                    >きょうせい</span
-                >
+                <span class="kanji">強制</span>
+                <span class="reading">きょうせい</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1616,25 +1671,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >CƯỜNG CHẾ</span
-                >
+                <span class="value">CƯỜNG CHẾ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="51">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >規制</span
-                >
-                <span class="reading"
-                    >きせい</span
-                >
+                <span class="kanji">規制</span>
+                <span class="reading">きせい</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1643,25 +1698,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >QUY CHẾ</span
-                >
+                <span class="value">QUY CHẾ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="52">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >拒否</span
-                >
-                <span class="reading"
-                    >きょひ</span
-                >
+                <span class="kanji">拒否</span>
+                <span class="reading">きょひ</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1670,25 +1725,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >CỰ PHỦ</span
-                >
+                <span class="value">CỰ PHỦ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="53">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >対抗</span
-                >
-                <span class="reading"
-                    >たいこう</span
-                >
+                <span class="kanji">対抗</span>
+                <span class="reading">たいこう</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1697,25 +1752,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >ĐỐI KHÁNG</span
-                >
+                <span class="value">ĐỐI KHÁNG</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="54">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >抗議</span
-                >
-                <span class="reading"
-                    >こうぎ</span
-                >
+                <span class="kanji">抗議</span>
+                <span class="reading">こうぎ</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1724,25 +1779,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >KHÁNG NGHỊ</span
-                >
+                <span class="value">KHÁNG NGHỊ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="55">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >革新</span
-                >
-                <span class="reading"
-                    >かくしん</span
-                >
+                <span class="kanji">革新</span>
+                <span class="reading">かくしん</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1751,25 +1806,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >CÁCH TÂN</span
-                >
+                <span class="value">CÁCH TÂN</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="56">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >原則</span
-                >
-                <span class="reading"
-                    >げんそく</span
-                >
+                <span class="kanji">原則</span>
+                <span class="reading">げんそく</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1778,25 +1833,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >NGUYÊN TẮC</span
-                >
+                <span class="value">NGUYÊN TẮC</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="57">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >経過</span
-                >
-                <span class="reading"
-                    >けいか</span
-                >
+                <span class="kanji">経過</span>
+                <span class="reading">けいか</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1805,25 +1860,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >KINH QUÁ/QUA</span
-                >
+                <span class="value">KINH QUÁ/QUA</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="58">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >中継</span
-                >
-                <span class="reading"
-                    >ちゅうけい</span
-                >
+                <span class="kanji">中継</span>
+                <span class="reading">ちゅうけい</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1832,25 +1887,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >TRUNG KẾ</span
-                >
+                <span class="value">TRUNG KẾ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="59">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >規模</span
-                >
-                <span class="reading"
-                    >きぼ</span
-                >
+                <span class="kanji">規模</span>
+                <span class="reading">きぼ</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1859,25 +1914,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >QUY MÔ</span
-                >
+                <span class="value">QUY MÔ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="60">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >擦る</span
-                >
-                <span class="reading"
-                    >こする</span
-                >
+                <span class="kanji">擦る</span>
+                <span class="reading">こする</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1886,25 +1941,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >SÁT</span
-                >
+                <span class="value">SÁT</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="61">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >摩る</span
-                >
-                <span class="reading"
-                    >さする</span
-                >
+                <span class="kanji">摩る</span>
+                <span class="reading">さする</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1913,25 +1968,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >MA</span
-                >
+                <span class="value">MA</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="62">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >撫でる</span
-                >
-                <span class="reading"
-                    >なでる</span
-                >
+                <span class="kanji">撫でる</span>
+                <span class="reading">なでる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1940,25 +1995,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >PHỦ</span
-                >
+                <span class="value">PHỦ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="63">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >弄る</span
-                >
-                <span class="reading"
-                    >いじる</span
-                >
+                <span class="kanji">弄る</span>
+                <span class="reading">いじる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1967,25 +2022,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >LỘNG</span
-                >
+                <span class="value">LỘNG</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="64">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >かき回す</span
-                >
-                <span class="reading"
-                    >かきまわす</span
-                >
+                <span class="kanji">かき回す</span>
+                <span class="reading">かきまわす</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -1994,25 +2049,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >HỒI</span
-                >
+                <span class="value">HỒI</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="65">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >摘む</span
-                >
-                <span class="reading"
-                    >つむ</span
-                >
+                <span class="kanji">摘む</span>
+                <span class="reading">つむ</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2021,25 +2076,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >TRÍCH</span
-                >
+                <span class="value">TRÍCH</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="66">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >摘む</span
-                >
-                <span class="reading"
-                    >つまむ</span
-                >
+                <span class="kanji">摘む</span>
+                <span class="reading">つまむ</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2048,45 +2103,47 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >TRÍCH</span
-                >
+                <span class="value">TRÍCH</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="67">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >つかむ</span
-                >
-                <span class="reading"
-                    >つかむ</span
-                >
+                <span class="kanji">つかむ</span>
+                <span class="reading">つかむ</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Nắm, tóm, bắt
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="68">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >捻れる</span
-                >
-                <span class="reading"
-                    >ねじれる</span
-                >
+                <span class="kanji">捻れる</span>
+                <span class="reading">ねじれる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2095,25 +2152,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >NIỆP</span
-                >
+                <span class="value">NIỆP</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="69">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >捻じる</span
-                >
-                <span class="reading"
-                    >ねじる</span
-                >
+                <span class="kanji">捻じる</span>
+                <span class="reading">ねじる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2122,25 +2179,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >NIỆP</span
-                >
+                <span class="value">NIỆP</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="70">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >捻る</span
-                >
-                <span class="reading"
-                    >ひねる</span
-                >
+                <span class="kanji">捻る</span>
+                <span class="reading">ひねる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2149,25 +2206,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >NIỆP</span
-                >
+                <span class="value">NIỆP</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="71">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >千切れる</span
-                >
-                <span class="reading"
-                    >ちぎれる</span
-                >
+                <span class="kanji">千切れる</span>
+                <span class="reading">ちぎれる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2176,25 +2233,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >THIÊN THIẾT</span
-                >
+                <span class="value">THIÊN THIẾT</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="72">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >千切る</span
-                >
-                <span class="reading"
-                    >ちぎる</span
-                >
+                <span class="kanji">千切る</span>
+                <span class="reading">ちぎる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2203,25 +2260,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >THIÊN THIẾT</span
-                >
+                <span class="value">THIÊN THIẾT</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="73">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >束ねる</span
-                >
-                <span class="reading"
-                    >たばねる</span
-                >
+                <span class="kanji">束ねる</span>
+                <span class="reading">たばねる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2230,25 +2287,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >THÚC</span
-                >
+                <span class="value">THÚC</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="74">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >扇ぐ</span
-                >
-                <span class="reading"
-                    >あおぐ</span
-                >
+                <span class="kanji">扇ぐ</span>
+                <span class="reading">あおぐ</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2257,45 +2314,47 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >PHIẾN</span
-                >
+                <span class="value">PHIẾN</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="75">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >くむ</span
-                >
-                <span class="reading"
-                    >くむ</span
-                >
+                <span class="kanji">くむ</span>
+                <span class="reading">くむ</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Múc, rót
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="76">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >咥える</span
-                >
-                <span class="reading"
-                    >くわえる</span
-                >
+                <span class="kanji">咥える</span>
+                <span class="reading">くわえる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2304,25 +2363,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >HÝ</span
-                >
+                <span class="value">HÝ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="77">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >舐める</span
-                >
-                <span class="reading"
-                    >なめる</span
-                >
+                <span class="kanji">舐める</span>
+                <span class="reading">なめる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2331,25 +2390,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >THỈ</span
-                >
+                <span class="value">THỈ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="78">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >俯く</span
-                >
-                <span class="reading"
-                    >うつむく</span
-                >
+                <span class="kanji">俯く</span>
+                <span class="reading">うつむく</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2358,25 +2417,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >PHỦ</span
-                >
+                <span class="value">PHỦ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="79">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >這う</span
-                >
-                <span class="reading"
-                    >はう</span
-                >
+                <span class="kanji">這う</span>
+                <span class="reading">はう</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2385,45 +2444,47 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >GIÁ</span
-                >
+                <span class="value">GIÁ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="80">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >くぐる</span
-                >
-                <span class="reading"
-                    >くぐる</span
-                >
+                <span class="kanji">くぐる</span>
+                <span class="reading">くぐる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
                 Vượt qua, băng qua
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="81">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >囁く</span
-                >
-                <span class="reading"
-                    >ささやく</span
-                >
+                <span class="kanji">囁く</span>
+                <span class="reading">ささやく</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2432,25 +2493,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >CHIẾP</span
-                >
+                <span class="value">CHIẾP</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="82">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >喚く</span
-                >
-                <span class="reading"
-                    >わめく</span
-                >
+                <span class="kanji">喚く</span>
+                <span class="reading">わめく</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2459,25 +2520,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >HOÁN</span
-                >
+                <span class="value">HOÁN</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="83">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >言いつける</span
-                >
-                <span class="reading"
-                    >いいつける</span
-                >
+                <span class="kanji">言いつける</span>
+                <span class="reading">いいつける</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2486,25 +2547,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >NGÔN</span
-                >
+                <span class="value">NGÔN</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="84">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >打ち明ける</span
-                >
-                <span class="reading"
-                    >うちあける</span
-                >
+                <span class="kanji">打ち明ける</span>
+                <span class="reading">うちあける</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2513,25 +2574,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >ĐẢ MINH</span
-                >
+                <span class="value">ĐẢ MINH</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="85">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >見かける</span
-                >
-                <span class="reading"
-                    >みかける</span
-                >
+                <span class="kanji">見かける</span>
+                <span class="reading">みかける</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2540,25 +2601,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >KIẾN</span
-                >
+                <span class="value">KIẾN</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="86">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >見分ける</span
-                >
-                <span class="reading"
-                    >みわける</span
-                >
+                <span class="kanji">見分ける</span>
+                <span class="reading">みわける</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2567,25 +2628,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >KIẾN</span
-                >
+                <span class="value">KIẾN</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="87">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >見渡す</span
-                >
-                <span class="reading"
-                    >みわたす</span
-                >
+                <span class="kanji">見渡す</span>
+                <span class="reading">みわたす</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2594,25 +2655,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >KIẾN ĐỘ</span
-                >
+                <span class="value">KIẾN ĐỘ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="88">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >見落とす</span
-                >
-                <span class="reading"
-                    >みおとす</span
-                >
+                <span class="kanji">見落とす</span>
+                <span class="reading">みおとす</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2621,25 +2682,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >KIẾN LẠC</span
-                >
+                <span class="value">KIẾN LẠC</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="89">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >乗り過ごす</span
-                >
-                <span class="reading"
-                    >のりすごす</span
-                >
+                <span class="kanji">乗り過ごす</span>
+                <span class="reading">のりすごす</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2648,25 +2709,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >THỪA QUÁ/QUA</span
-                >
+                <span class="value">THỪA QUÁ/QUA</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="90">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >乗り越える</span
-                >
-                <span class="reading"
-                    >のりこえる</span
-                >
+                <span class="kanji">乗り越える</span>
+                <span class="reading">のりこえる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2675,25 +2736,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >THỪA VIỆT</span
-                >
+                <span class="value">THỪA VIỆT</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="91">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >歩む</span
-                >
-                <span class="reading"
-                    >あゆむ</span
-                >
+                <span class="kanji">歩む</span>
+                <span class="reading">あゆむ</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2702,25 +2763,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >BỘ</span
-                >
+                <span class="value">BỘ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="92">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >持つ</span
-                >
-                <span class="reading"
-                    >もつ</span
-                >
+                <span class="kanji">持つ</span>
+                <span class="reading">もつ</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2729,25 +2790,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >TRÌ</span
-                >
+                <span class="value">TRÌ</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="93">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >保つ</span
-                >
-                <span class="reading"
-                    >たもつ</span
-                >
+                <span class="kanji">保つ</span>
+                <span class="reading">たもつ</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2756,25 +2817,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >BẢO</span
-                >
+                <span class="value">BẢO</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="94">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >築く</span
-                >
-                <span class="reading"
-                    >きずく</span
-                >
+                <span class="kanji">築く</span>
+                <span class="reading">きずく</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2783,25 +2844,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >TRÚC</span
-                >
+                <span class="value">TRÚC</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="95">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >絶える</span
-                >
-                <span class="reading"
-                    >たえる</span
-                >
+                <span class="kanji">絶える</span>
+                <span class="reading">たえる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2810,25 +2871,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >TUYỆT</span
-                >
+                <span class="value">TUYỆT</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="96">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >断つ/絶つ</span
-                >
-                <span class="reading"
-                    >たつ</span
-                >
+                <span class="kanji">断つ/絶つ</span>
+                <span class="reading">たつ</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2837,25 +2898,25 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >ĐOẠN/TUYỆT</span
-                >
+                <span class="value">ĐOẠN/TUYỆT</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
     <div class="vocabulary-card" data-index="97">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >途切れる</span
-                >
-                <span class="reading"
-                    >とぎれる</span
-                >
+                <span class="kanji">途切れる</span>
+                <span class="reading">とぎれる</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -2864,28 +2925,29 @@
             
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >ĐỒ THIẾT</span
-                >
+                <span class="value">ĐỒ THIẾT</span>
             </div>
             
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     
 </div>
 
-<script src="/toangroi/static/js/tuvung.js"></script>
+<script src="/static/js/tuvung.js"></script>
 
                 </div>
-            </div>
-        </main>
+            </main>
 
-        <footer>
-            <div class="container">
-                <p>
-                    &copy; 2025 Toang mẹ rồi - Generated on 2025-06-15 18:01:07
-                </p>
-            </div>
-        </footer>
+            <footer class="footer">
+                <div class="footer-container">
+                    <p class="copyright">
+                        &copy; 2025 Toang mẹ rồi - Generated on 2025-06-15 18:43:45
+                    </p>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>

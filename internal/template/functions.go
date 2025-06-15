@@ -13,7 +13,52 @@ func TemplateFunctions() template.FuncMap {
 		"parseOptions": parseOptions,
 		"formatYear":   formatYear,
 		"capitalize":   capitalize,
+		"hasPrefix":    strings.HasPrefix,
+		"hasSuffix":    strings.HasSuffix,
+		"trimPrefix":   strings.TrimPrefix,
+		"trimSuffix":   strings.TrimSuffix,
+		"contains":     strings.Contains,
+		"split":        strings.Split,
+		"slice":        slice,
+		"sub":          sub,
+		"add":          add,
+		"gt":           gt,
+		"lt":           lt,
 	}
+}
+
+// slice returns a substring of s from start to end
+func slice(s string, start, end int) string {
+	if start < 0 {
+		start = 0
+	}
+	if end > len(s) {
+		end = len(s)
+	}
+	if start > end {
+		return ""
+	}
+	return s[start:end]
+}
+
+// sub returns x - y
+func sub(x, y int) int {
+	return x - y
+}
+
+// add returns x + y
+func add(x, y int) int {
+	return x + y
+}
+
+// gt returns x > y
+func gt(x, y int) bool {
+	return x > y
+}
+
+// lt returns x < y
+func lt(x, y int) bool {
+	return x < y
 }
 
 // parseOptions parses a string representation of an array into a slice of strings

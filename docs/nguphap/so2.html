@@ -10,8 +10,12 @@
         <title>Toang mẹ rồi - so2</title>
         <link
             rel="stylesheet"
-            href="/toangroi/static/css/style.css"
+            href="/static/css/style.css"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <meta name="theme-color" content="#2563eb">
         <style>
             :root {
                 --primary-color: {
@@ -32,235 +36,251 @@
             }
         </style>
         
-        <script src="/toangroi/static/js/main.js" defer></script>
+        <script src="/static/js/main.js" defer></script>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <h1 class="site-title">
-                    Toang mẹ rồi
-                </h1>
-                <nav class="main-nav">
-                    <ul>
-                        <li class="">
-                            <a href="/toangroi/index.html">Home</a>
-                        </li>
+        <div class="app-container">
+            <header class="header">
+                <div class="header-container">
+                    <div class="header-logo">
+                        <a href="/index.html" class="logo-link">
+                            <h1 class="site-title">Toang mẹ rồi</h1>
+                        </a>
+                    </div>
+                    
+                    <div class="header-nav">
+                        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle menu">
+                            <span class="menu-icon"></span>
+                        </button>
                         
-                        <li class="dropdown">
-                            <a href="/toangroi/tuvung/n1_1.html"
-                                >Từ vựng</a
-                            >
-                            
-                        </li>
-                        
-                        <li class="dropdown">
-                            <a href="/toangroi/nguphap/so1.html"
-                                >Ngữ pháp</a
-                            >
-                            
-                        </li>
-                        
-                    </ul>
-                </nav>
-            </div>
-        </header>
+                        <nav class="main-nav">
+                            <ul class="nav-list">
+                                <li class="nav-item ">
+                                    <a href="/index.html" class="nav-link">Trang chủ</a>
+                                </li>
+                                
+                                <li class="nav-item dropdown">
+                                    <a href="/tuvung/n1_1.html" class="nav-link">
+                                        Từ vựng
+                                        <span class="dropdown-icon">▾</span>
+                                    </a>
+                                    
+                                </li>
+                                
+                                <li class="nav-item dropdown">
+                                    <a href="/nguphap/so1.html" class="nav-link">
+                                        Ngữ pháp
+                                        <span class="dropdown-icon">▾</span>
+                                    </a>
+                                    
+                                </li>
+                                
+                            </ul>
+                        </nav>
 
-        <main>
-            <div class="container docs-container">
-                <div class="docs-sidebar">
-                    <nav class="docs-sidebar-nav">
-                        <h3 class="docs-sidebar-title">Content Type</h3>
-                        
-                        <div class="docs-sidebar-group">
-                            <h4 class="docs-sidebar-group-title">Từ vựng</h4>
-                            <ul class="docs-sidebar-list">
+                        <div class="theme-toggle">
+                            <button id="theme-toggle-btn" aria-label="Toggle dark mode">
+                                <span class="light-icon">☀️</span>
+                                <span class="dark-icon">🌙</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <aside class="sidebar">
+                    <nav class="sidebar-nav">
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-title">Từ vựng</h3>
+                            <ul class="sidebar-list">
                                 
                                     
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_1.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_1.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_1
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_10.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_10.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_10
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_11.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_11.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_11
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_12.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_12.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_12
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_2.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_2.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_2
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_3.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_3.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_3
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_4.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_4.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_4
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_5.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_5.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_5
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_6.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_6.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_6
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_7.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_7.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_7
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_8.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_8.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_8
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_9.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_9.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_9
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_1.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_1.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_1
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_10.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_10.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_10
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_12.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_12.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_12
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_2.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_2.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_2
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_3.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_3.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_3
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_4.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_4.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_4
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_5.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_5.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_5
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_7.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_7.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_7
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_8.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_8.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_8
                                             </a>
@@ -271,70 +291,70 @@
                             </ul>
                         </div>
                         
-                        <div class="docs-sidebar-group">
-                            <h4 class="docs-sidebar-group-title">Ngữ pháp</h4>
-                            <ul class="docs-sidebar-list">
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-title">Ngữ pháp</h3>
+                            <ul class="sidebar-list">
                                 
                                     
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so1.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so1.html" 
+                                                class="sidebar-link "
                                             >
                                                 so1
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so2.html" 
-                                                class="docs-sidebar-link active"
+                                                href="/nguphap/so2.html" 
+                                                class="sidebar-link active"
                                             >
                                                 so2
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so3.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so3.html" 
+                                                class="sidebar-link "
                                             >
                                                 so3
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so4.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so4.html" 
+                                                class="sidebar-link "
                                             >
                                                 so4
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so5.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so5.html" 
+                                                class="sidebar-link "
                                             >
                                                 so5
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so6.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so6.html" 
+                                                class="sidebar-link "
                                             >
                                                 so6
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so7.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so7.html" 
+                                                class="sidebar-link "
                                             >
                                                 so7
                                             </a>
@@ -345,1028 +365,848 @@
                             </ul>
                         </div>
                     </nav>
-                </div>
-            
-                <div class="docs-content">
+                </aside>
+                
+                <div class="content">
                     
 <div class="content-header">
     <h2>so2 - Ngữ pháp</h2>
     <div class="content-controls">
-        <button id="show-all-answers" class="button  button-outline">
-            Hiển thị tất cả đáp án
+        <button id="show-all-answers" class="button button-primary">
+            <span class="icon">✓</span> Hiển thị tất cả đáp án
         </button>
-        <button id="hide-all-answers" class="button button-outline">
-            Hiển thị câu hỏi
+        <button id="hide-all-answers" class="button button-secondary">
+            <span class="icon">↻</span> Hiển thị câu hỏi
         </button>
     </div>
 </div>
 
 <div class="grammar-container">
     
-    <div class="grammar-question" data-index="0">
-        <div class="question-header">
-            <span class="question-number"></span>
-            <h3>1．革靴（かわぐつ）の修理の（　　　　）、きれいに磨いてもらった。</h3>
+    <div class="grammar-question card" data-index="0">
+    <div class="question-header">
+        <div class="question-badge"></div>
+        <div class="question-content">
+            
+            
+                <h3>1．革靴（かわぐつ）の修理の（　　　　）、きれいに磨いてもらった。</h3>
+            
         </div>
+    </div>
+
+    
 
         <div class="answer-options">
             
             
             
             <div class="answer-option correct">
-                <input
-                    type="radio"
-                    name="question-0"
-                    id="q0-opt0"
-                    value="ついでに"
-                />
-                <label for="q0-opt0">ついでに</label>
+                <input type="radio" name="question-0" value="ついでに" class="option-radio" style="display: none;" />
+                <span class="option-text">ついでに</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-0"
-                    id="q0-opt1"
-                    value="あげく"
-                />
-                <label for="q0-opt1">あげく</label>
+                <input type="radio" name="question-0" value="あげく" class="option-radio" style="display: none;" />
+                <span class="option-text">あげく</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-0"
-                    id="q0-opt2"
-                    value="ところに"
-                />
-                <label for="q0-opt2">ところに</label>
+                <input type="radio" name="question-0" value="ところに" class="option-radio" style="display: none;" />
+                <span class="option-text">ところに</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-0"
-                    id="q0-opt3"
-                    value="上では"
-                />
-                <label for="q0-opt3">上では</label>
+                <input type="radio" name="question-0" value="上では" class="option-radio" style="display: none;" />
+                <span class="option-text">上では</span>
             </div>
             
         </div>
 
         <div class="answer-result hidden">
             <div class="correct-answer">
+                <span class="icon-success">✓</span>
                 <strong>Đáp án đúng:</strong>
                 <span>ついでに</span>
             </div>
         </div>
 
         <div class="question-controls">
-            <button class="check-answer-btn button  button-outline">
-                Kiểm tra đáp án
+            <button class="check-answer-btn button button-primary">
+                <span class="icon">🔍</span> Kiểm tra đáp án
             </button>
         </div>
     </div>
     
-    <div class="grammar-question" data-index="1">
-        <div class="question-header">
-            <span class="question-number"></span>
-            <h3>2. 少子化（　　　　　）、大学の経営にも改革が求められている。</h3>
+    <div class="grammar-question card" data-index="1">
+    <div class="question-header">
+        <div class="question-badge"></div>
+        <div class="question-content">
+            
+            
+                <h3>2. 少子化（　　　　　）、大学の経営にも改革が求められている。</h3>
+            
         </div>
+    </div>
+
+    
 
         <div class="answer-options">
             
             
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-1"
-                    id="q1-opt0"
-                    value="以来"
-                />
-                <label for="q1-opt0">以来</label>
+                <input type="radio" name="question-1" value="以来" class="option-radio" style="display: none;" />
+                <span class="option-text">以来</span>
             </div>
             
             <div class="answer-option correct">
-                <input
-                    type="radio"
-                    name="question-1"
-                    id="q1-opt1"
-                    value="にともない"
-                />
-                <label for="q1-opt1">にともない</label>
+                <input type="radio" name="question-1" value="にともない" class="option-radio" style="display: none;" />
+                <span class="option-text">にともない</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-1"
-                    id="q1-opt2"
-                    value="のたびに"
-                />
-                <label for="q1-opt2">のたびに</label>
+                <input type="radio" name="question-1" value="のたびに" class="option-radio" style="display: none;" />
+                <span class="option-text">のたびに</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-1"
-                    id="q1-opt3"
-                    value="次第で"
-                />
-                <label for="q1-opt3">次第で</label>
+                <input type="radio" name="question-1" value="次第で" class="option-radio" style="display: none;" />
+                <span class="option-text">次第で</span>
             </div>
             
         </div>
 
         <div class="answer-result hidden">
             <div class="correct-answer">
+                <span class="icon-success">✓</span>
                 <strong>Đáp án đúng:</strong>
                 <span>にともない</span>
             </div>
         </div>
 
         <div class="question-controls">
-            <button class="check-answer-btn button  button-outline">
-                Kiểm tra đáp án
+            <button class="check-answer-btn button button-primary">
+                <span class="icon">🔍</span> Kiểm tra đáp án
             </button>
         </div>
     </div>
     
-    <div class="grammar-question" data-index="2">
-        <div class="question-header">
-            <span class="question-number"></span>
-            <h3>3. 漢字が多すぎて、（　　　　　　　）。</h3>
+    <div class="grammar-question card" data-index="2">
+    <div class="question-header">
+        <div class="question-badge"></div>
+        <div class="question-content">
+            
+            
+                <h3>3. 漢字が多すぎて、（　　　　　　　）。</h3>
+            
         </div>
+    </div>
+
+    
 
         <div class="answer-options">
             
             
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-2"
-                    id="q2-opt0"
-                    value="覚えきりだ"
-                />
-                <label for="q2-opt0">覚えきりだ</label>
+                <input type="radio" name="question-2" value="覚えきりだ" class="option-radio" style="display: none;" />
+                <span class="option-text">覚えきりだ</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-2"
-                    id="q2-opt1"
-                    value="覚えきらない"
-                />
-                <label for="q2-opt1">覚えきらない</label>
+                <input type="radio" name="question-2" value="覚えきらない" class="option-radio" style="display: none;" />
+                <span class="option-text">覚えきらない</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-2"
-                    id="q2-opt2"
-                    value="覚えきった"
-                />
-                <label for="q2-opt2">覚えきった</label>
+                <input type="radio" name="question-2" value="覚えきった" class="option-radio" style="display: none;" />
+                <span class="option-text">覚えきった</span>
             </div>
             
             <div class="answer-option correct">
-                <input
-                    type="radio"
-                    name="question-2"
-                    id="q2-opt3"
-                    value="覚えきれない"
-                />
-                <label for="q2-opt3">覚えきれない</label>
+                <input type="radio" name="question-2" value="覚えきれない" class="option-radio" style="display: none;" />
+                <span class="option-text">覚えきれない</span>
             </div>
             
         </div>
 
         <div class="answer-result hidden">
             <div class="correct-answer">
+                <span class="icon-success">✓</span>
                 <strong>Đáp án đúng:</strong>
                 <span>覚えきれない</span>
             </div>
         </div>
 
         <div class="question-controls">
-            <button class="check-answer-btn button  button-outline">
-                Kiểm tra đáp án
+            <button class="check-answer-btn button button-primary">
+                <span class="icon">🔍</span> Kiểm tra đáp án
             </button>
         </div>
     </div>
     
-    <div class="grammar-question" data-index="3">
-        <div class="question-header">
-            <span class="question-number"></span>
-            <h3>4. この家具はシンプル（　　　　）存在感があってよい。</h3>
+    <div class="grammar-question card" data-index="3">
+    <div class="question-header">
+        <div class="question-badge"></div>
+        <div class="question-content">
+            
+            
+                <h3>4. この家具はシンプル（　　　　）存在感があってよい。</h3>
+            
         </div>
+    </div>
+
+    
 
         <div class="answer-options">
             
             
             
             <div class="answer-option correct">
-                <input
-                    type="radio"
-                    name="question-3"
-                    id="q3-opt0"
-                    value="ながら"
-                />
-                <label for="q3-opt0">ながら</label>
+                <input type="radio" name="question-3" value="ながら" class="option-radio" style="display: none;" />
+                <span class="option-text">ながら</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-3"
-                    id="q3-opt1"
-                    value="一方で"
-                />
-                <label for="q3-opt1">一方で</label>
+                <input type="radio" name="question-3" value="一方で" class="option-radio" style="display: none;" />
+                <span class="option-text">一方で</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-3"
-                    id="q3-opt2"
-                    value="ついでに"
-                />
-                <label for="q3-opt2">ついでに</label>
+                <input type="radio" name="question-3" value="ついでに" class="option-radio" style="display: none;" />
+                <span class="option-text">ついでに</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-3"
-                    id="q3-opt3"
-                    value="につれて"
-                />
-                <label for="q3-opt3">につれて</label>
+                <input type="radio" name="question-3" value="につれて" class="option-radio" style="display: none;" />
+                <span class="option-text">につれて</span>
             </div>
             
         </div>
 
         <div class="answer-result hidden">
             <div class="correct-answer">
+                <span class="icon-success">✓</span>
                 <strong>Đáp án đúng:</strong>
                 <span>ながら</span>
             </div>
         </div>
 
         <div class="question-controls">
-            <button class="check-answer-btn button  button-outline">
-                Kiểm tra đáp án
+            <button class="check-answer-btn button button-primary">
+                <span class="icon">🔍</span> Kiểm tra đáp án
             </button>
         </div>
     </div>
     
-    <div class="grammar-question" data-index="4">
-        <div class="question-header">
-            <span class="question-number"></span>
-            <h3>5. このメール文は文法の間違いはないが、言葉の使い方の（　　　　　）相手に対して失礼な言い方がある。</h3>
+    <div class="grammar-question card" data-index="4">
+    <div class="question-header">
+        <div class="question-badge"></div>
+        <div class="question-content">
+            
+            
+                <h3>5. このメール文は文法の間違いはないが、言葉の使い方の（　　　　　）相手に対して失礼な言い方がある。</h3>
+            
         </div>
+    </div>
+
+    
 
         <div class="answer-options">
             
             
             
             <div class="answer-option correct">
-                <input
-                    type="radio"
-                    name="question-4"
-                    id="q4-opt0"
-                    value="上で"
-                />
-                <label for="q4-opt0">上で</label>
+                <input type="radio" name="question-4" value="上で" class="option-radio" style="display: none;" />
+                <span class="option-text">上で</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-4"
-                    id="q4-opt1"
-                    value="末に"
-                />
-                <label for="q4-opt1">末に</label>
+                <input type="radio" name="question-4" value="末に" class="option-radio" style="display: none;" />
+                <span class="option-text">末に</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-4"
-                    id="q4-opt2"
-                    value="あげく"
-                />
-                <label for="q4-opt2">あげく</label>
+                <input type="radio" name="question-4" value="あげく" class="option-radio" style="display: none;" />
+                <span class="option-text">あげく</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-4"
-                    id="q4-opt3"
-                    value="つつも"
-                />
-                <label for="q4-opt3">つつも</label>
+                <input type="radio" name="question-4" value="つつも" class="option-radio" style="display: none;" />
+                <span class="option-text">つつも</span>
             </div>
             
         </div>
 
         <div class="answer-result hidden">
             <div class="correct-answer">
+                <span class="icon-success">✓</span>
                 <strong>Đáp án đúng:</strong>
                 <span>上で</span>
             </div>
         </div>
 
         <div class="question-controls">
-            <button class="check-answer-btn button  button-outline">
-                Kiểm tra đáp án
+            <button class="check-answer-btn button button-primary">
+                <span class="icon">🔍</span> Kiểm tra đáp án
             </button>
         </div>
     </div>
     
-    <div class="grammar-question" data-index="5">
-        <div class="question-header">
-            <span class="question-number"></span>
-            <h3>6. 女性の社会進出（　　　　）結婚年齢が上がってきた。</h3>
+    <div class="grammar-question card" data-index="5">
+    <div class="question-header">
+        <div class="question-badge"></div>
+        <div class="question-content">
+            
+            
+                <h3>6. 女性の社会進出（　　　　）結婚年齢が上がってきた。</h3>
+            
         </div>
+    </div>
+
+    
 
         <div class="answer-options">
             
             
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-5"
-                    id="q5-opt0"
-                    value="してはじめて"
-                />
-                <label for="q5-opt0">してはじめて</label>
+                <input type="radio" name="question-5" value="してはじめて" class="option-radio" style="display: none;" />
+                <span class="option-text">してはじめて</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-5"
-                    id="q5-opt1"
-                    value="の次第で"
-                />
-                <label for="q5-opt1">の次第で</label>
+                <input type="radio" name="question-5" value="の次第で" class="option-radio" style="display: none;" />
+                <span class="option-text">の次第で</span>
             </div>
             
             <div class="answer-option correct">
-                <input
-                    type="radio"
-                    name="question-5"
-                    id="q5-opt2"
-                    value="とともに"
-                />
-                <label for="q5-opt2">とともに</label>
+                <input type="radio" name="question-5" value="とともに" class="option-radio" style="display: none;" />
+                <span class="option-text">とともに</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-5"
-                    id="q5-opt3"
-                    value="ながら"
-                />
-                <label for="q5-opt3">ながら</label>
+                <input type="radio" name="question-5" value="ながら" class="option-radio" style="display: none;" />
+                <span class="option-text">ながら</span>
             </div>
             
         </div>
 
         <div class="answer-result hidden">
             <div class="correct-answer">
+                <span class="icon-success">✓</span>
                 <strong>Đáp án đúng:</strong>
                 <span>とともに</span>
             </div>
         </div>
 
         <div class="question-controls">
-            <button class="check-answer-btn button  button-outline">
-                Kiểm tra đáp án
+            <button class="check-answer-btn button button-primary">
+                <span class="icon">🔍</span> Kiểm tra đáp án
             </button>
         </div>
     </div>
     
-    <div class="grammar-question" data-index="6">
-        <div class="question-header">
-            <span class="question-number"></span>
-            <h3>7.  この本は、大地震を（　　　　）人たちの記録だ。</h3>
+    <div class="grammar-question card" data-index="6">
+    <div class="question-header">
+        <div class="question-badge"></div>
+        <div class="question-content">
+            
+            
+                <h3>7.  この本は、大地震を（　　　　）人たちの記録だ。</h3>
+            
         </div>
+    </div>
+
+    
 
         <div class="answer-options">
             
             
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-6"
-                    id="q6-opt0"
-                    value="生きた上での"
-                />
-                <label for="q6-opt0">生きた上での</label>
+                <input type="radio" name="question-6" value="生きた上での" class="option-radio" style="display: none;" />
+                <span class="option-text">生きた上での</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-6"
-                    id="q6-opt1"
-                    value="行ながらの"
-                />
-                <label for="q6-opt1">行ながらの</label>
+                <input type="radio" name="question-6" value="行ながらの" class="option-radio" style="display: none;" />
+                <span class="option-text">行ながらの</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-6"
-                    id="q6-opt2"
-                    value="生ききる"
-                />
-                <label for="q6-opt2">生ききる</label>
+                <input type="radio" name="question-6" value="生ききる" class="option-radio" style="display: none;" />
+                <span class="option-text">生ききる</span>
             </div>
             
             <div class="answer-option correct">
-                <input
-                    type="radio"
-                    name="question-6"
-                    id="q6-opt3"
-                    value="生きぬいた"
-                />
-                <label for="q6-opt3">生きぬいた</label>
+                <input type="radio" name="question-6" value="生きぬいた" class="option-radio" style="display: none;" />
+                <span class="option-text">生きぬいた</span>
             </div>
             
         </div>
 
         <div class="answer-result hidden">
             <div class="correct-answer">
+                <span class="icon-success">✓</span>
                 <strong>Đáp án đúng:</strong>
                 <span>生きぬいた</span>
             </div>
         </div>
 
         <div class="question-controls">
-            <button class="check-answer-btn button  button-outline">
-                Kiểm tra đáp án
+            <button class="check-answer-btn button button-primary">
+                <span class="icon">🔍</span> Kiểm tra đáp án
             </button>
         </div>
     </div>
     
-    <div class="grammar-question" data-index="7">
-        <div class="question-header">
-            <span class="question-number"></span>
-            <h3>8．大学の専攻は経済だったとはいう（　　　　）、仕事では役に立たない知識ばかり学んだ。</h3>
+    <div class="grammar-question card" data-index="7">
+    <div class="question-header">
+        <div class="question-badge"></div>
+        <div class="question-content">
+            
+            
+                <h3>8．大学の専攻は経済だったとはいう（　　　　）、仕事では役に立たない知識ばかり学んだ。</h3>
+            
         </div>
+    </div>
+
+    
 
         <div class="answer-options">
             
             
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-7"
-                    id="q7-opt0"
-                    value="上で"
-                />
-                <label for="q7-opt0">上で</label>
+                <input type="radio" name="question-7" value="上で" class="option-radio" style="display: none;" />
+                <span class="option-text">上で</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-7"
-                    id="q7-opt1"
-                    value="つつも"
-                />
-                <label for="q7-opt1">つつも</label>
+                <input type="radio" name="question-7" value="つつも" class="option-radio" style="display: none;" />
+                <span class="option-text">つつも</span>
             </div>
             
             <div class="answer-option correct">
-                <input
-                    type="radio"
-                    name="question-7"
-                    id="q7-opt2"
-                    value="ものの"
-                />
-                <label for="q7-opt2">ものの</label>
+                <input type="radio" name="question-7" value="ものの" class="option-radio" style="display: none;" />
+                <span class="option-text">ものの</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-7"
-                    id="q7-opt3"
-                    value="に伴って"
-                />
-                <label for="q7-opt3">に伴って</label>
+                <input type="radio" name="question-7" value="に伴って" class="option-radio" style="display: none;" />
+                <span class="option-text">に伴って</span>
             </div>
             
         </div>
 
         <div class="answer-result hidden">
             <div class="correct-answer">
+                <span class="icon-success">✓</span>
                 <strong>Đáp án đúng:</strong>
                 <span>ものの</span>
             </div>
         </div>
 
         <div class="question-controls">
-            <button class="check-answer-btn button  button-outline">
-                Kiểm tra đáp án
+            <button class="check-answer-btn button button-primary">
+                <span class="icon">🔍</span> Kiểm tra đáp án
             </button>
         </div>
     </div>
     
-    <div class="grammar-question" data-index="8">
-        <div class="question-header">
-            <span class="question-number"></span>
-            <h3>9．緊張し（　　　　　）、笑顔でプレゼンテーションを終えることができる。</h3>
+    <div class="grammar-question card" data-index="8">
+    <div class="question-header">
+        <div class="question-badge"></div>
+        <div class="question-content">
+            
+            
+                <h3>9．緊張し（　　　　　）、笑顔でプレゼンテーションを終えることができる。</h3>
+            
         </div>
+    </div>
+
+    
 
         <div class="answer-options">
             
             
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-8"
-                    id="q8-opt0"
-                    value="ついでに"
-                />
-                <label for="q8-opt0">ついでに</label>
+                <input type="radio" name="question-8" value="ついでに" class="option-radio" style="display: none;" />
+                <span class="option-text">ついでに</span>
             </div>
             
             <div class="answer-option correct">
-                <input
-                    type="radio"
-                    name="question-8"
-                    id="q8-opt1"
-                    value="つつも"
-                />
-                <label for="q8-opt1">つつも</label>
+                <input type="radio" name="question-8" value="つつも" class="option-radio" style="display: none;" />
+                <span class="option-text">つつも</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-8"
-                    id="q8-opt2"
-                    value="てからでないと"
-                />
-                <label for="q8-opt2">てからでないと</label>
+                <input type="radio" name="question-8" value="てからでないと" class="option-radio" style="display: none;" />
+                <span class="option-text">てからでないと</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-8"
-                    id="q8-opt3"
-                    value="てはじめて"
-                />
-                <label for="q8-opt3">てはじめて</label>
+                <input type="radio" name="question-8" value="てはじめて" class="option-radio" style="display: none;" />
+                <span class="option-text">てはじめて</span>
             </div>
             
         </div>
 
         <div class="answer-result hidden">
             <div class="correct-answer">
+                <span class="icon-success">✓</span>
                 <strong>Đáp án đúng:</strong>
                 <span>つつも</span>
             </div>
         </div>
 
         <div class="question-controls">
-            <button class="check-answer-btn button  button-outline">
-                Kiểm tra đáp án
+            <button class="check-answer-btn button button-primary">
+                <span class="icon">🔍</span> Kiểm tra đáp án
             </button>
         </div>
     </div>
     
-    <div class="grammar-question" data-index="9">
-        <div class="question-header">
-            <span class="question-number"></span>
-            <h3>10. 卒業した大学へ行って（　　　　）、新しくてきれいな校舎（こうしゃ）にかわってきた。</h3>
+    <div class="grammar-question card" data-index="9">
+    <div class="question-header">
+        <div class="question-badge"></div>
+        <div class="question-content">
+            
+            
+                <h3>10. 卒業した大学へ行って（　　　　）、新しくてきれいな校舎（こうしゃ）にかわってきた。</h3>
+            
         </div>
+    </div>
+
+    
 
         <div class="answer-options">
             
             
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-9"
-                    id="q9-opt0"
-                    value="みるところ"
-                />
-                <label for="q9-opt0">みるところ</label>
+                <input type="radio" name="question-9" value="みるところ" class="option-radio" style="display: none;" />
+                <span class="option-text">みるところ</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-9"
-                    id="q9-opt1"
-                    value="みところ"
-                />
-                <label for="q9-opt1">みところ</label>
+                <input type="radio" name="question-9" value="みところ" class="option-radio" style="display: none;" />
+                <span class="option-text">みところ</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-9"
-                    id="q9-opt2"
-                    value="みてところ"
-                />
-                <label for="q9-opt2">みてところ</label>
+                <input type="radio" name="question-9" value="みてところ" class="option-radio" style="display: none;" />
+                <span class="option-text">みてところ</span>
             </div>
             
             <div class="answer-option correct">
-                <input
-                    type="radio"
-                    name="question-9"
-                    id="q9-opt3"
-                    value="みたところ"
-                />
-                <label for="q9-opt3">みたところ</label>
+                <input type="radio" name="question-9" value="みたところ" class="option-radio" style="display: none;" />
+                <span class="option-text">みたところ</span>
             </div>
             
         </div>
 
         <div class="answer-result hidden">
             <div class="correct-answer">
+                <span class="icon-success">✓</span>
                 <strong>Đáp án đúng:</strong>
                 <span>みたところ</span>
             </div>
         </div>
 
         <div class="question-controls">
-            <button class="check-answer-btn button  button-outline">
-                Kiểm tra đáp án
+            <button class="check-answer-btn button button-primary">
+                <span class="icon">🔍</span> Kiểm tra đáp án
             </button>
         </div>
     </div>
     
-    <div class="grammar-question" data-index="10">
-        <div class="question-header">
-            <span class="question-number"></span>
-            <h3>11. 一人（　　　　）食事するのは寂しい。</h3>
+    <div class="grammar-question card" data-index="10">
+    <div class="question-header">
+        <div class="question-badge"></div>
+        <div class="question-content">
+            
+            
+                <h3>11. 一人（　　　　）食事するのは寂しい。</h3>
+            
         </div>
+    </div>
+
+    
 
         <div class="answer-options">
             
             
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-10"
-                    id="q10-opt0"
-                    value="上で"
-                />
-                <label for="q10-opt0">上で</label>
+                <input type="radio" name="question-10" value="上で" class="option-radio" style="display: none;" />
+                <span class="option-text">上で</span>
             </div>
             
             <div class="answer-option correct">
-                <input
-                    type="radio"
-                    name="question-10"
-                    id="q10-opt1"
-                    value="きりで"
-                />
-                <label for="q10-opt1">きりで</label>
+                <input type="radio" name="question-10" value="きりで" class="option-radio" style="display: none;" />
+                <span class="option-text">きりで</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-10"
-                    id="q10-opt2"
-                    value="ともに"
-                />
-                <label for="q10-opt2">ともに</label>
+                <input type="radio" name="question-10" value="ともに" class="option-radio" style="display: none;" />
+                <span class="option-text">ともに</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-10"
-                    id="q10-opt3"
-                    value="ながら"
-                />
-                <label for="q10-opt3">ながら</label>
+                <input type="radio" name="question-10" value="ながら" class="option-radio" style="display: none;" />
+                <span class="option-text">ながら</span>
             </div>
             
         </div>
 
         <div class="answer-result hidden">
             <div class="correct-answer">
+                <span class="icon-success">✓</span>
                 <strong>Đáp án đúng:</strong>
                 <span>きりで</span>
             </div>
         </div>
 
         <div class="question-controls">
-            <button class="check-answer-btn button  button-outline">
-                Kiểm tra đáp án
+            <button class="check-answer-btn button button-primary">
+                <span class="icon">🔍</span> Kiểm tra đáp án
             </button>
         </div>
     </div>
     
-    <div class="grammar-question" data-index="11">
-        <div class="question-header">
-            <span class="question-number"></span>
-            <h3>12. 足にけがをしていることは、友達に言われ（　　　　　）気付いた。</h3>
+    <div class="grammar-question card" data-index="11">
+    <div class="question-header">
+        <div class="question-badge"></div>
+        <div class="question-content">
+            
+            
+                <h3>12. 足にけがをしていることは、友達に言われ（　　　　　）気付いた。</h3>
+            
         </div>
+    </div>
+
+    
 
         <div class="answer-options">
             
             
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-11"
-                    id="q11-opt0"
-                    value="た末に"
-                />
-                <label for="q11-opt0">た末に</label>
+                <input type="radio" name="question-11" value="た末に" class="option-radio" style="display: none;" />
+                <span class="option-text">た末に</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-11"
-                    id="q11-opt1"
-                    value="たところ"
-                />
-                <label for="q11-opt1">たところ</label>
+                <input type="radio" name="question-11" value="たところ" class="option-radio" style="display: none;" />
+                <span class="option-text">たところ</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-11"
-                    id="q11-opt2"
-                    value="てからでないと"
-                />
-                <label for="q11-opt2">てからでないと</label>
+                <input type="radio" name="question-11" value="てからでないと" class="option-radio" style="display: none;" />
+                <span class="option-text">てからでないと</span>
             </div>
             
             <div class="answer-option correct">
-                <input
-                    type="radio"
-                    name="question-11"
-                    id="q11-opt3"
-                    value="てはじめて"
-                />
-                <label for="q11-opt3">てはじめて</label>
+                <input type="radio" name="question-11" value="てはじめて" class="option-radio" style="display: none;" />
+                <span class="option-text">てはじめて</span>
             </div>
             
         </div>
 
         <div class="answer-result hidden">
             <div class="correct-answer">
+                <span class="icon-success">✓</span>
                 <strong>Đáp án đúng:</strong>
                 <span>てはじめて</span>
             </div>
         </div>
 
         <div class="question-controls">
-            <button class="check-answer-btn button  button-outline">
-                Kiểm tra đáp án
+            <button class="check-answer-btn button button-primary">
+                <span class="icon">🔍</span> Kiểm tra đáp án
             </button>
         </div>
     </div>
     
-    <div class="grammar-question" data-index="12">
-        <div class="question-header">
-            <span class="question-number"></span>
-            <h3>13. 長い戦い（　　　　）、この国にも平和な時代がやってきた。</h3>
+    <div class="grammar-question card" data-index="12">
+    <div class="question-header">
+        <div class="question-badge"></div>
+        <div class="question-content">
+            
+            
+                <h3>13. 長い戦い（　　　　）、この国にも平和な時代がやってきた。</h3>
+            
         </div>
+    </div>
+
+    
 
         <div class="answer-options">
             
             
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-12"
-                    id="q12-opt0"
-                    value="とともに"
-                />
-                <label for="q12-opt0">とともに</label>
+                <input type="radio" name="question-12" value="とともに" class="option-radio" style="display: none;" />
+                <span class="option-text">とともに</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-12"
-                    id="q12-opt1"
-                    value="にしたがって"
-                />
-                <label for="q12-opt1">にしたがって</label>
+                <input type="radio" name="question-12" value="にしたがって" class="option-radio" style="display: none;" />
+                <span class="option-text">にしたがって</span>
             </div>
             
             <div class="answer-option correct">
-                <input
-                    type="radio"
-                    name="question-12"
-                    id="q12-opt2"
-                    value="の末に"
-                />
-                <label for="q12-opt2">の末に</label>
+                <input type="radio" name="question-12" value="の末に" class="option-radio" style="display: none;" />
+                <span class="option-text">の末に</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-12"
-                    id="q12-opt3"
-                    value="ぬいて"
-                />
-                <label for="q12-opt3">ぬいて</label>
+                <input type="radio" name="question-12" value="ぬいて" class="option-radio" style="display: none;" />
+                <span class="option-text">ぬいて</span>
             </div>
             
         </div>
 
         <div class="answer-result hidden">
             <div class="correct-answer">
+                <span class="icon-success">✓</span>
                 <strong>Đáp án đúng:</strong>
                 <span>の末に</span>
             </div>
         </div>
 
         <div class="question-controls">
-            <button class="check-answer-btn button  button-outline">
-                Kiểm tra đáp án
+            <button class="check-answer-btn button button-primary">
+                <span class="icon">🔍</span> Kiểm tra đáp án
             </button>
         </div>
     </div>
     
-    <div class="grammar-question" data-index="13">
-        <div class="question-header">
-            <span class="question-number"></span>
-            <h3>14. ジョギングをやめてから、体力は失われていく（　　　　）。</h3>
+    <div class="grammar-question card" data-index="13">
+    <div class="question-header">
+        <div class="question-badge"></div>
+        <div class="question-content">
+            
+            
+                <h3>14. ジョギングをやめてから、体力は失われていく（　　　　）。</h3>
+            
         </div>
+    </div>
+
+    
 
         <div class="answer-options">
             
             
             
             <div class="answer-option correct">
-                <input
-                    type="radio"
-                    name="question-13"
-                    id="q13-opt0"
-                    value="一方だ"
-                />
-                <label for="q13-opt0">一方だ</label>
+                <input type="radio" name="question-13" value="一方だ" class="option-radio" style="display: none;" />
+                <span class="option-text">一方だ</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-13"
-                    id="q13-opt1"
-                    value="きりだ"
-                />
-                <label for="q13-opt1">きりだ</label>
+                <input type="radio" name="question-13" value="きりだ" class="option-radio" style="display: none;" />
+                <span class="option-text">きりだ</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-13"
-                    id="q13-opt2"
-                    value="次第だ"
-                />
-                <label for="q13-opt2">次第だ</label>
+                <input type="radio" name="question-13" value="次第だ" class="option-radio" style="display: none;" />
+                <span class="option-text">次第だ</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-13"
-                    id="q13-opt3"
-                    value="ついでだ"
-                />
-                <label for="q13-opt3">ついでだ</label>
+                <input type="radio" name="question-13" value="ついでだ" class="option-radio" style="display: none;" />
+                <span class="option-text">ついでだ</span>
             </div>
             
         </div>
 
         <div class="answer-result hidden">
             <div class="correct-answer">
+                <span class="icon-success">✓</span>
                 <strong>Đáp án đúng:</strong>
                 <span>一方だ</span>
             </div>
         </div>
 
         <div class="question-controls">
-            <button class="check-answer-btn button  button-outline">
-                Kiểm tra đáp án
+            <button class="check-answer-btn button button-primary">
+                <span class="icon">🔍</span> Kiểm tra đáp án
             </button>
         </div>
     </div>
     
-    <div class="grammar-question" data-index="14">
-        <div class="question-header">
-            <span class="question-number"></span>
-            <h3>15. 新人を育成するには、教務のトレーニングをする（　　　　）、長い目で見守る姿勢も大切だ。</h3>
+    <div class="grammar-question card" data-index="14">
+    <div class="question-header">
+        <div class="question-badge"></div>
+        <div class="question-content">
+            
+            
+                <h3>15. 新人を育成するには、教務のトレーニングをする（　　　　）、長い目で見守る姿勢も大切だ。</h3>
+            
         </div>
+    </div>
+
+    
 
         <div class="answer-options">
             
             
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-14"
-                    id="q14-opt0"
-                    value="あげく"
-                />
-                <label for="q14-opt0">あげく</label>
+                <input type="radio" name="question-14" value="あげく" class="option-radio" style="display: none;" />
+                <span class="option-text">あげく</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-14"
-                    id="q14-opt1"
-                    value="上で"
-                />
-                <label for="q14-opt1">上で</label>
+                <input type="radio" name="question-14" value="上で" class="option-radio" style="display: none;" />
+                <span class="option-text">上で</span>
             </div>
             
             <div class="answer-option correct">
-                <input
-                    type="radio"
-                    name="question-14"
-                    id="q14-opt2"
-                    value="とともに"
-                />
-                <label for="q14-opt2">とともに</label>
+                <input type="radio" name="question-14" value="とともに" class="option-radio" style="display: none;" />
+                <span class="option-text">とともに</span>
             </div>
             
             <div class="answer-option ">
-                <input
-                    type="radio"
-                    name="question-14"
-                    id="q14-opt3"
-                    value="につれて"
-                />
-                <label for="q14-opt3">につれて</label>
+                <input type="radio" name="question-14" value="につれて" class="option-radio" style="display: none;" />
+                <span class="option-text">につれて</span>
             </div>
             
         </div>
 
         <div class="answer-result hidden">
             <div class="correct-answer">
+                <span class="icon-success">✓</span>
                 <strong>Đáp án đúng:</strong>
                 <span>とともに</span>
             </div>
         </div>
 
         <div class="question-controls">
-            <button class="check-answer-btn button  button-outline">
-                Kiểm tra đáp án
+            <button class="check-answer-btn button button-primary">
+                <span class="icon">🔍</span> Kiểm tra đáp án
             </button>
         </div>
     </div>
     
 </div>
 
-<script src="/toangroi/static/js/nguphap.js"></script>
+<script src="/static/js/nguphap.js"></script>
 
                 </div>
-            </div>
-        </main>
+            </main>
 
-        <footer>
-            <div class="container">
-                <p>
-                    &copy; 2025 Toang mẹ rồi - Generated on 2025-06-15 18:01:07
-                </p>
-            </div>
-        </footer>
+            <footer class="footer">
+                <div class="footer-container">
+                    <p class="copyright">
+                        &copy; 2025 Toang mẹ rồi - Generated on 2025-06-15 18:43:45
+                    </p>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>

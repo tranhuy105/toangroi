@@ -2,49 +2,58 @@
 <div class="content-header">
     <h2>{{ .Content.ContentID }} - {{ .Config.Pages.Grammar.Title }}</h2>
     <div class="content-controls">
-        <button id="show-all-answers" class="button  button-outline">
-            Hiển thị tất cả đáp án
+        <button id="show-all-answers" class="button button-primary">
+            <span class="icon">✓</span> Hiển thị tất cả đáp án
         </button>
-        <button id="hide-all-answers" class="button button-outline">
-            Hiển thị câu hỏi
+        <button id="hide-all-answers" class="button button-secondary">
+            <span class="icon">↻</span> Hiển thị câu hỏi
         </button>
     </div>
 </div>
 
 <div class="grammar-container">
     {{ range $index, $row := .Content.Rows }}
-    <div class="grammar-question" data-index="{{ $index }}">
-        <div class="question-header">
-            <span class="question-number">{{ index $row "Câu số" }}</span>
-            <h3>{{ index $row "Câu hỏi" }}</h3>
+    <div class="grammar-question card" data-index="{{ $index }}">
+    <div class="question-header">
+        <div class="question-badge">{{ index $row "Câu số" }}</div>
+        <div class="question-content">
+            {{ $question := index $row "Câu hỏi" }}
+            {{ if not (and (contains $question "[IMG:") (contains $question "]")) }}
+                <h3>{{ $question }}</h3>
+            {{ end }}
         </div>
+    </div>
+
+    {{ if and (contains $question "[IMG:") (contains $question "]") }}
+        {{ $imgStart := index (split $question "[IMG:") 1 }}
+        {{ $imgURL := index (split $imgStart "]") 0 }}
+        <div class="question-image-container">
+            <img src="{{ $imgURL }}" alt="Grammar question image" class="question-image" />
+        </div>
+    {{ end }}
 
         <div class="answer-options">
             {{ $options := parseOptions (index $row "Lựa chọn") }}
             {{ $correctAnswer := index $row "Đáp án đúng" }}
             {{ range $optIndex, $option := $options }}
             <div class="answer-option {{ if eq $option $correctAnswer }}correct{{ end }}">
-                <input
-                    type="radio"
-                    name="question-{{ $index }}"
-                    id="q{{ $index }}-opt{{ $optIndex }}"
-                    value="{{ $option }}"
-                />
-                <label for="q{{ $index }}-opt{{ $optIndex }}">{{ $option }}</label>
+                <input type="radio" name="question-{{ $index }}" value="{{ $option }}" class="option-radio" style="display: none;" />
+                <span class="option-text">{{ $option }}</span>
             </div>
             {{ end }}
         </div>
 
         <div class="answer-result hidden">
             <div class="correct-answer">
+                <span class="icon-success">✓</span>
                 <strong>Đáp án đúng:</strong>
                 <span>{{ $correctAnswer }}</span>
             </div>
         </div>
 
         <div class="question-controls">
-            <button class="check-answer-btn button  button-outline">
-                Kiểm tra đáp án
+            <button class="check-answer-btn button button-primary">
+                <span class="icon">🔍</span> Kiểm tra đáp án
             </button>
         </div>
     </div>

@@ -1,7 +1,7 @@
 # CAP TOC Configuration
 name: "Toang mẹ rồi"
 
-base_url: "/toangroi"
+base_url: ""
 
 # Theme configuration
 theme:

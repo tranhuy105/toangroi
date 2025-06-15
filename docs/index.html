@@ -10,8 +10,12 @@
         <title>Toang mẹ rồi</title>
         <link
             rel="stylesheet"
-            href="/toangroi/static/css/style.css"
+            href="/static/css/style.css"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <meta name="theme-color" content="#2563eb">
         <style>
             :root {
                 --primary-color: {
@@ -32,235 +36,251 @@
             }
         </style>
         
-        <script src="/toangroi/static/js/main.js" defer></script>
+        <script src="/static/js/main.js" defer></script>
     </head>
     <body>
-        <header>
-            <div class="container">
-                <h1 class="site-title">
-                    Toang mẹ rồi
-                </h1>
-                <nav class="main-nav">
-                    <ul>
-                        <li class="active">
-                            <a href="/toangroi/index.html">Home</a>
-                        </li>
+        <div class="app-container">
+            <header class="header">
+                <div class="header-container">
+                    <div class="header-logo">
+                        <a href="/index.html" class="logo-link">
+                            <h1 class="site-title">Toang mẹ rồi</h1>
+                        </a>
+                    </div>
+                    
+                    <div class="header-nav">
+                        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle menu">
+                            <span class="menu-icon"></span>
+                        </button>
                         
-                        <li class="dropdown">
-                            <a href="/toangroi/tuvung/n1_1.html"
-                                >Từ vựng</a
-                            >
-                            
-                        </li>
-                        
-                        <li class="dropdown">
-                            <a href="/toangroi/nguphap/so1.html"
-                                >Ngữ pháp</a
-                            >
-                            
-                        </li>
-                        
-                    </ul>
-                </nav>
-            </div>
-        </header>
+                        <nav class="main-nav">
+                            <ul class="nav-list">
+                                <li class="nav-item active">
+                                    <a href="/index.html" class="nav-link">Trang chủ</a>
+                                </li>
+                                
+                                <li class="nav-item dropdown">
+                                    <a href="/tuvung/n1_1.html" class="nav-link">
+                                        Từ vựng
+                                        <span class="dropdown-icon">▾</span>
+                                    </a>
+                                    
+                                </li>
+                                
+                                <li class="nav-item dropdown">
+                                    <a href="/nguphap/so1.html" class="nav-link">
+                                        Ngữ pháp
+                                        <span class="dropdown-icon">▾</span>
+                                    </a>
+                                    
+                                </li>
+                                
+                            </ul>
+                        </nav>
 
-        <main>
-            <div class="container docs-container">
-                <div class="docs-sidebar">
-                    <nav class="docs-sidebar-nav">
-                        <h3 class="docs-sidebar-title">Content Type</h3>
-                        
-                        <div class="docs-sidebar-group">
-                            <h4 class="docs-sidebar-group-title">Từ vựng</h4>
-                            <ul class="docs-sidebar-list">
+                        <div class="theme-toggle">
+                            <button id="theme-toggle-btn" aria-label="Toggle dark mode">
+                                <span class="light-icon">☀️</span>
+                                <span class="dark-icon">🌙</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <aside class="sidebar">
+                    <nav class="sidebar-nav">
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-title">Từ vựng</h3>
+                            <ul class="sidebar-list">
                                 
                                     
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_1.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_1.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_1
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_10.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_10.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_10
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_11.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_11.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_11
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_12.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_12.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_12
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_2.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_2.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_2
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_3.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_3.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_3
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_4.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_4.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_4
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_5.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_5.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_5
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_6.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_6.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_6
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_7.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_7.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_7
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_8.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_8.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_8
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n1_9.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n1_9.html" 
+                                                class="sidebar-link "
                                             >
                                                 n1_9
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_1.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_1.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_1
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_10.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_10.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_10
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_12.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_12.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_12
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_2.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_2.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_2
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_3.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_3.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_3
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_4.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_4.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_4
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_5.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_5.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_5
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_7.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_7.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_7
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/tuvung/n2_8.html" 
-                                                class="docs-sidebar-link "
+                                                href="/tuvung/n2_8.html" 
+                                                class="sidebar-link "
                                             >
                                                 n2_8
                                             </a>
@@ -271,70 +291,70 @@
                             </ul>
                         </div>
                         
-                        <div class="docs-sidebar-group">
-                            <h4 class="docs-sidebar-group-title">Ngữ pháp</h4>
-                            <ul class="docs-sidebar-list">
+                        <div class="sidebar-section">
+                            <h3 class="sidebar-title">Ngữ pháp</h3>
+                            <ul class="sidebar-list">
                                 
                                     
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so1.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so1.html" 
+                                                class="sidebar-link "
                                             >
                                                 so1
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so2.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so2.html" 
+                                                class="sidebar-link "
                                             >
                                                 so2
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so3.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so3.html" 
+                                                class="sidebar-link "
                                             >
                                                 so3
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so4.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so4.html" 
+                                                class="sidebar-link "
                                             >
                                                 so4
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so5.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so5.html" 
+                                                class="sidebar-link "
                                             >
                                                 so5
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so6.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so6.html" 
+                                                class="sidebar-link "
                                             >
                                                 so6
                                             </a>
                                         </li>
                                         
-                                        <li>
+                                        <li class="sidebar-item">
                                             <a 
-                                                href="/toangroi/nguphap/so7.html" 
-                                                class="docs-sidebar-link "
+                                                href="/nguphap/so7.html" 
+                                                class="sidebar-link "
                                             >
                                                 so7
                                             </a>
@@ -345,289 +365,251 @@
                             </ul>
                         </div>
                     </nav>
-                </div>
-            
-                <div class="docs-content">
+                </aside>
+                
+                <div class="content">
                     
 <div class="content-header">
     <h2>Nội dung học tập</h2>
 </div>
 
-<div class="docs-overview">
-    <p class="docs-welcome">
-        Chào mừng đến với trang học tập Tiếng Nhật! Đây là
-        nơi bạn có thể tìm thấy các bài học ngữ pháp và từ
-        vựng được tổ chức theo từng chủ đề.
-    </p>
+<div class="hero-section">
+    <div class="hero-content">
+        <h3 class="hero-title">Chào mừng đến với trang học tập Tiếng Nhật!</h3>
+        <p class="hero-text">
+            Đây là nơi bạn có thể tìm thấy các bài học ngữ pháp và từ
+            vựng được tổ chức theo từng chủ đề. Tài liệu được thiết kế
+            để giúp bạn học hiệu quả và dễ dàng ôn tập.
+        </p>
+    </div>
+</div>
 
-    <div class="docs-sections">
-        <div class="docs-section-card">
-            <h3>Từ vựng</h3>
-            <p>
-                Học các từ vựng cơ bản và nâng cao trong
-                Tiếng Nhật
+<div class="content-grid">
+    <div class="content-card">
+        <div class="card-header">
+            <h3 class="card-title">
+                <span class="card-icon">📚</span>
+                Từ vựng
+            </h3>
+        </div>
+        <div class="card-body">
+            <p class="card-description">
+                Học các từ vựng cơ bản và nâng cao trong Tiếng Nhật.
+                Mỗi bài học đều có thẻ từ vựng với cách đọc và nghĩa.
             </p>
-            <ul class="docs-section-list">
+            <ul class="content-list">
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n1_1.html"
-                        class="docs-section-link"
-                    >
-                        n1_1
+                <li class="content-item">
+                    <a href="/tuvung/n1_1.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n1_1</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n1_10.html"
-                        class="docs-section-link"
-                    >
-                        n1_10
+                <li class="content-item">
+                    <a href="/tuvung/n1_10.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n1_10</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n1_11.html"
-                        class="docs-section-link"
-                    >
-                        n1_11
+                <li class="content-item">
+                    <a href="/tuvung/n1_11.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n1_11</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n1_12.html"
-                        class="docs-section-link"
-                    >
-                        n1_12
+                <li class="content-item">
+                    <a href="/tuvung/n1_12.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n1_12</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n1_2.html"
-                        class="docs-section-link"
-                    >
-                        n1_2
+                <li class="content-item">
+                    <a href="/tuvung/n1_2.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n1_2</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n1_3.html"
-                        class="docs-section-link"
-                    >
-                        n1_3
+                <li class="content-item">
+                    <a href="/tuvung/n1_3.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n1_3</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n1_4.html"
-                        class="docs-section-link"
-                    >
-                        n1_4
+                <li class="content-item">
+                    <a href="/tuvung/n1_4.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n1_4</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n1_5.html"
-                        class="docs-section-link"
-                    >
-                        n1_5
+                <li class="content-item">
+                    <a href="/tuvung/n1_5.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n1_5</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n1_6.html"
-                        class="docs-section-link"
-                    >
-                        n1_6
+                <li class="content-item">
+                    <a href="/tuvung/n1_6.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n1_6</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n1_7.html"
-                        class="docs-section-link"
-                    >
-                        n1_7
+                <li class="content-item">
+                    <a href="/tuvung/n1_7.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n1_7</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n1_8.html"
-                        class="docs-section-link"
-                    >
-                        n1_8
+                <li class="content-item">
+                    <a href="/tuvung/n1_8.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n1_8</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n1_9.html"
-                        class="docs-section-link"
-                    >
-                        n1_9
+                <li class="content-item">
+                    <a href="/tuvung/n1_9.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n1_9</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n2_1.html"
-                        class="docs-section-link"
-                    >
-                        n2_1
+                <li class="content-item">
+                    <a href="/tuvung/n2_1.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n2_1</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n2_10.html"
-                        class="docs-section-link"
-                    >
-                        n2_10
+                <li class="content-item">
+                    <a href="/tuvung/n2_10.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n2_10</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n2_12.html"
-                        class="docs-section-link"
-                    >
-                        n2_12
+                <li class="content-item">
+                    <a href="/tuvung/n2_12.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n2_12</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n2_2.html"
-                        class="docs-section-link"
-                    >
-                        n2_2
+                <li class="content-item">
+                    <a href="/tuvung/n2_2.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n2_2</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n2_3.html"
-                        class="docs-section-link"
-                    >
-                        n2_3
+                <li class="content-item">
+                    <a href="/tuvung/n2_3.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n2_3</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n2_4.html"
-                        class="docs-section-link"
-                    >
-                        n2_4
+                <li class="content-item">
+                    <a href="/tuvung/n2_4.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n2_4</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n2_5.html"
-                        class="docs-section-link"
-                    >
-                        n2_5
+                <li class="content-item">
+                    <a href="/tuvung/n2_5.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n2_5</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n2_7.html"
-                        class="docs-section-link"
-                    >
-                        n2_7
+                <li class="content-item">
+                    <a href="/tuvung/n2_7.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n2_7</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/tuvung/n2_8.html"
-                        class="docs-section-link"
-                    >
-                        n2_8
+                <li class="content-item">
+                    <a href="/tuvung/n2_8.html" class="content-link">
+                        <span class="content-icon">📖</span>
+                        <span>n2_8</span>
                     </a>
                 </li>
                 
             </ul>
         </div>
+    </div>
 
-        <div class="docs-section-card">
-            <h3>Ngữ pháp</h3>
-            <p>
-                Các bài học ngữ pháp từ cơ bản đến nâng cao
+    <div class="content-card">
+        <div class="card-header">
+            <h3 class="card-title">
+                <span class="card-icon">🖋️</span>
+                Ngữ pháp
+            </h3>
+        </div>
+        <div class="card-body">
+            <p class="card-description">
+                Các bài học ngữ pháp từ cơ bản đến nâng cao.
+                Mỗi bài học đều có ví dụ và bài tập để giúp bạn hiểu rõ hơn.
             </p>
-            <ul class="docs-section-list">
+            <ul class="content-list">
                 
-                <li>
-                    <a
-                        href="/toangroi/nguphap/so1.html"
-                        class="docs-section-link"
-                    >
-                        so1
+                <li class="content-item">
+                    <a href="/nguphap/so1.html" class="content-link">
+                        <span class="content-icon">📝</span>
+                        <span>so1</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/nguphap/so2.html"
-                        class="docs-section-link"
-                    >
-                        so2
+                <li class="content-item">
+                    <a href="/nguphap/so2.html" class="content-link">
+                        <span class="content-icon">📝</span>
+                        <span>so2</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/nguphap/so3.html"
-                        class="docs-section-link"
-                    >
-                        so3
+                <li class="content-item">
+                    <a href="/nguphap/so3.html" class="content-link">
+                        <span class="content-icon">📝</span>
+                        <span>so3</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/nguphap/so4.html"
-                        class="docs-section-link"
-                    >
-                        so4
+                <li class="content-item">
+                    <a href="/nguphap/so4.html" class="content-link">
+                        <span class="content-icon">📝</span>
+                        <span>so4</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/nguphap/so5.html"
-                        class="docs-section-link"
-                    >
-                        so5
+                <li class="content-item">
+                    <a href="/nguphap/so5.html" class="content-link">
+                        <span class="content-icon">📝</span>
+                        <span>so5</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/nguphap/so6.html"
-                        class="docs-section-link"
-                    >
-                        so6
+                <li class="content-item">
+                    <a href="/nguphap/so6.html" class="content-link">
+                        <span class="content-icon">📝</span>
+                        <span>so6</span>
                     </a>
                 </li>
                 
-                <li>
-                    <a
-                        href="/toangroi/nguphap/so7.html"
-                        class="docs-section-link"
-                    >
-                        so7
+                <li class="content-item">
+                    <a href="/nguphap/so7.html" class="content-link">
+                        <span class="content-icon">📝</span>
+                        <span>so7</span>
                     </a>
                 </li>
                 
@@ -637,15 +619,15 @@
 </div>
 
                 </div>
-            </div>
-        </main>
+            </main>
 
-        <footer>
-            <div class="container">
-                <p>
-                    &copy; 2025 Toang mẹ rồi - Generated on 2025-06-15 18:01:07
-                </p>
-            </div>
-        </footer>
+            <footer class="footer">
+                <div class="footer-container">
+                    <p class="copyright">
+                        &copy; 2025 Toang mẹ rồi - Generated on 2025-06-15 18:43:46
+                    </p>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>

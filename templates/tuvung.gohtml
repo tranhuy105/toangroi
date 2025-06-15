@@ -2,20 +2,20 @@
 <div class="content-header">
     <h2>{{ .Content.ContentID }} - Từ vựng</h2>
     <div class="content-controls">
-        <button id="toggle-all" class="button">
-            Hiển thị tất cả
-        </button>
-        <button id="hide-all" class="button">
-            Ẩn tất cả
-        </button>
         <div class="search-box">
+            <span class="search-icon">🔍</span>
             <input
                 type="text"
                 id="search-input"
-                placeholder="Tìm kiếm từ"
+                placeholder="Tìm kiếm từ..."
             />
-            <button id="search-button" class="button">
-                Tìm
+        </div>
+        <div class="button-group">
+            <button id="toggle-all" class="button button-primary">
+                <span class="icon">👁️</span> Hiển thị tất cả
+            </button>
+            <button id="hide-all" class="button button-secondary">
+                <span class="icon">👁️‍🗨️</span> Ẩn tất cả
             </button>
         </div>
     </div>
@@ -26,14 +26,13 @@
     <div class="vocabulary-card" data-index="{{ $index }}">
         <div class="card-front">
             <div class="japanese">
-                <span class="kanji"
-                    >{{ index $row "japanese" }}</span
-                >
-                <span class="reading"
-                    >{{ index $row "reading" }}</span
-                >
+                <span class="kanji">{{ index $row "japanese" }}</span>
+                <span class="reading">{{ index $row "reading" }}</span>
             </div>
-            <button class="toggle-button">Xem</button>
+            <button class="toggle-button">
+                <span class="toggle-icon">👁️</span>
+                <span class="toggle-text">Xem</span>
+            </button>
         </div>
         <div class="card-back hidden">
             <div class="meaning">
@@ -42,11 +41,12 @@
             {{ if index $row "sinoVietnamese" }}
             <div class="sino-vietnamese">
                 <span class="label">Hán Việt:</span>
-                <span class="value"
-                    >{{ index $row "sinoVietnamese" }}</span
-                >
+                <span class="value">{{ index $row "sinoVietnamese" }}</span>
             </div>
             {{ end }}
+            <button class="close-button">
+                <span class="close-icon">×</span>
+            </button>
         </div>
     </div>
     {{ end }}
