@@ -16,8 +16,8 @@ type Config struct {
 	Theme ThemeConfig `yaml:"theme"`
 	// Navigation menu items
 	Menu []MenuItem `yaml:"menu"`
-	// Page configurations
-	Pages PageConfigs `yaml:"pages"`
+	// Content types configuration
+	ContentTypes map[string]ContentTypeConfig `yaml:"content_types"`
 	// Directory where data files are stored
 	DataDir string `yaml:"data_dir"`
 	// Directory where template files are stored
@@ -62,29 +62,25 @@ type MenuItem struct {
 	URL string `yaml:"url"`
 	// Icon name
 	Icon string `yaml:"icon,omitempty"`
+	// Content type this menu item is associated with (optional)
+	ContentType string `yaml:"content_type,omitempty"`
 	// Child menu items (submenu)
 	Children []MenuItem `yaml:"children,omitempty"`
 }
 
-// PageConfigs holds configurations for different page types
-type PageConfigs struct {
-	// Vocabulary page configuration
-	Vocabulary PageConfig `yaml:"vocabulary"`
-	// Grammar page configuration
-	Grammar PageConfig `yaml:"grammar"`
-}
-
-// PageConfig holds configuration for a specific page type
-type PageConfig struct {
-	// Title of the page
+// ContentTypeConfig holds configuration for a specific content type
+type ContentTypeConfig struct {
+	// Title of the content type
 	Title string `yaml:"title"`
+	// Template to use for this content type
+	Template string `yaml:"template,omitempty"`
 	// Whether to show search functionality
 	ShowSearch bool `yaml:"show_search"`
-	// Card layout type for vocabulary
+	// Card layout type for vocabulary-like content
 	CardLayout string `yaml:"card_layout,omitempty"`
-	// Whether to show results immediately
+	// Whether to show results immediately for quiz-like content
 	ShowResultImmediately bool `yaml:"show_result_immediately,omitempty"`
-	// Whether to highlight correct answers
+	// Whether to highlight correct answers for quiz-like content
 	HighlightCorrect bool `yaml:"highlight_correct,omitempty"`
 	// Field configurations
 	Fields []FieldConfig `yaml:"fields"`
@@ -108,6 +104,7 @@ func DefaultConfig() *Config {
 		DataDir:     "data",
 		TemplateDir: "templates",
 		OutputDir:   "output",
+		ContentTypes: make(map[string]ContentTypeConfig),
 	}
 	
 	// Default theme
@@ -130,34 +127,42 @@ func DefaultConfig() *Config {
 			Label: "Từ vựng",
 			URL:   "/tuvung/n1_1.html",
 			Icon:  "book",
+			ContentType: "tuvung",
 		},
 		{
 			Label: "Ngữ pháp",
 			URL:   "/nguphap/so1.html",
 			Icon:  "pencil",
+			ContentType: "nguphap",
 		},
 	}
 
-	// Default vocabulary page config
-	cfg.Pages.Vocabulary.Title = "Từ vựng"
-	cfg.Pages.Vocabulary.ShowSearch = true
-	cfg.Pages.Vocabulary.CardLayout = "flip"
-	cfg.Pages.Vocabulary.Fields = []FieldConfig{
-		{Name: "japanese", Label: "Kanji", Display: true},
-		{Name: "reading", Label: "Reading", Display: true},
-		{Name: "meaning", Label: "Meaning", Display: true},
-		{Name: "sinoVietnamese", Label: "Hán Việt", Display: true},
+	// Default vocabulary content type config
+	cfg.ContentTypes["tuvung"] = ContentTypeConfig{
+		Title: "Từ vựng",
+		ShowSearch: true,
+		Template: "tuvung",
+		CardLayout: "flip",
+		Fields: []FieldConfig{
+			{Name: "japanese", Label: "Kanji", Display: true},
+			{Name: "reading", Label: "Reading", Display: true},
+			{Name: "meaning", Label: "Meaning", Display: true},
+			{Name: "sinoVietnamese", Label: "Hán Việt", Display: true},
+		},
 	}
 
-	// Default grammar page config
-	cfg.Pages.Grammar.Title = "Ngữ pháp"
-	cfg.Pages.Grammar.ShowResultImmediately = false
-	cfg.Pages.Grammar.HighlightCorrect = true
-	cfg.Pages.Grammar.Fields = []FieldConfig{
-		{Name: "Câu số", Label: "Question Number", Display: true},
-		{Name: "Câu hỏi", Label: "Question", Display: true},
-		{Name: "Đáp án đúng", Label: "Correct Answer", Display: false},
-		{Name: "Lựa chọn", Label: "Options", Display: true},
+	// Default grammar content type config
+	cfg.ContentTypes["nguphap"] = ContentTypeConfig{
+		Title: "Ngữ pháp",
+		Template: "nguphap",
+		ShowResultImmediately: false,
+		HighlightCorrect: true,
+		Fields: []FieldConfig{
+			{Name: "Câu số", Label: "Question Number", Display: true},
+			{Name: "Câu hỏi", Label: "Question", Display: true},
+			{Name: "Đáp án đúng", Label: "Correct Answer", Display: false},
+			{Name: "Lựa chọn", Label: "Options", Display: true},
+		},
 	}
 
 	return cfg

@@ -150,6 +150,14 @@ body {
     display: flex;
     align-items: center;
     gap: var(--spacing-lg);
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 /* Navigation */
@@ -267,6 +275,19 @@ body {
 
 .menu-icon::after {
     bottom: -6px;
+}
+
+/* Active state for menu icon (hamburger to X) */
+.menu-icon.active {
+    background-color: transparent;
+}
+
+.menu-icon.active::before {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.menu-icon.active::after {
+    transform: translateY(-6px) rotate(-45deg);
 }
 
 /* Theme toggle */
@@ -635,20 +656,16 @@ body {
     font-size: var(--font-size-lg);
     font-weight: var(--font-weight-medium);
     margin-bottom: var(--spacing-sm);
+    word-break: break-word;
 }
 
-/* Updated question image container for full width */
+/* Fixed question image container - remove the negative margins */
 .question-image-container {
     margin: var(--spacing-md) 0;
     width: 100%;
-    /* Remove the image from the flex context */
-    margin-left: calc(-1 * var(--spacing-lg) - 36px); /* Offset the badge width + gap */
-    margin-right: 0;
-    padding-left: calc(var(--spacing-lg) + 36px); /* Add back the offset as padding */
     background-color: var(--background-alt);
     border-radius: var(--border-radius);
-    padding-top: var(--spacing-md);
-    padding-bottom: var(--spacing-md);
+    padding: var(--spacing-md);
     display: flex;
     justify-content: center;
 }
@@ -752,6 +769,8 @@ body {
     transition: transform var(--transition-fast), box-shadow var(--transition-fast),
                 background-color var(--transition-normal), border-color var(--transition-normal);
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .vocabulary-card:hover {
@@ -775,6 +794,7 @@ body {
 .kanji {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-semibold);
+    word-break: break-word;
 }
 
 .reading {
@@ -794,6 +814,7 @@ body {
     display: flex;
     align-items: center;
     gap: var(--spacing-xs);
+    flex-shrink: 0;
 }
 
 .toggle-button:hover {
@@ -902,18 +923,74 @@ body {
     
     .content-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .card-header h3.card-title {
+        font-size: var(--font-size-base);
+    }
+    
+    .vocabulary-card .card-front {
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+    
+    .vocabulary-card .toggle-button {
+        margin-left: auto;
+    }
+    
+    .answer-option {
+        padding: var(--spacing-sm);
+    }
+    
+    .button-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
     }
 }
 
 @media (max-width: 640px) {
+    :root {
+        --header-height: auto;
+    }
+    
+    .header {
+        position: relative;
+    }
+    
     .header-container {
         flex-wrap: wrap;
-        padding: var(--spacing-sm);
-        height: auto;
+        padding: var(--spacing-sm) var(--spacing-md);
+        justify-content: space-between;
     }
     
     .mobile-menu-toggle {
         display: block;
+        order: 3;
+    }
+
+    .header-logo {
+        order: 1;
+        max-width: 60%;
+    }
+    
+    .site-title {
+        font-size: var(--font-size-lg);
+        white-space: normal;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .header-right {
+        order: 2;
+    }
+    
+    .header-nav {
+        width: 100%;
+        order: 4;
+        justify-content: flex-start;
+        margin-top: var(--spacing-md);
     }
     
     .main-nav {
@@ -923,30 +1000,117 @@ body {
     
     .main-nav.show {
         display: block;
+        animation: slideDown 0.3s ease-in-out;
     }
     
     .nav-list {
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
+        width: 100%;
+        border-top: 1px solid var(--border-color);
+        margin-top: var(--spacing-sm);
+        padding-top: 0;
+    }
+    
+    .nav-item {
+        width: 100%;
     }
     
     .nav-link {
         width: 100%;
-        padding: var(--spacing-md);
+        padding: var(--spacing-md) var(--spacing-md);
+        border-radius: 0;
+        border-bottom: 1px solid var(--border-color);
+        font-size: var(--font-size-base);
+        line-height: 1.2;
+        display: flex;
+        align-items: center;
+        min-height: 48px; /* Ensures good tap target size */
+        justify-content: space-between;
+    }
+    
+    .dropdown-icon {
+        margin-left: auto;
     }
     
     .dropdown-menu {
         position: static;
         width: 100%;
         box-shadow: none;
-        padding-left: var(--spacing-lg);
+        display: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        background-color: var(--background-alt);
+    }
+    
+    .dropdown-menu.active {
+        display: block;
+    }
+    
+    .dropdown-item:last-child .dropdown-link {
+        border-bottom: none;
+    }
+    
+    .dropdown-link {
+        padding: var(--spacing-md) calc(var(--spacing-md) * 2);
+        border-bottom: 1px solid var(--border-color);
+        font-size: var(--font-size-base);
+        line-height: 1.2;
+        min-height: 44px; /* Ensures good tap target size */
+        display: flex;
+        align-items: center;
+    }
+    
+    /* Fix any nested dropdowns in mobile view */
+    .dropdown:hover .dropdown-menu {
+        display: none;
+    }
+
+    .dropdown .dropdown-menu.active {
+        display: block;
+    }
+    
+    /* Reduce spacing in content for mobile */
+    .content {
+        padding: 0;
+    }
+    
+    .content-header h2 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .hero-section {
+        padding: var(--spacing-md);
+    }
+    
+    .card {
+        padding: var(--spacing-md);
+    }
+    
+    .grammar-container .question-badge {
+        width: 28px;
+        height: 28px;
+        font-size: var(--font-size-sm);
+    }
+    
+    .question-header {
+        gap: var(--spacing-sm);
+    }
+    
+    /* Better handling of option buttons on small screens */
+    .button-primary, .button-secondary {
+        padding: var(--spacing-sm) var(--spacing-md);
+        width: 100%;
+        justify-content: center;
     }
     
     .content-controls {
         width: 100%;
         flex-direction: column;
         align-items: stretch;
+        gap: var(--spacing-md);
     }
     
     .search-box {
@@ -957,12 +1121,95 @@ body {
         width: 100%;
     }
     
+    .vocabulary-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .answer-option {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .card-back {
+        padding: var(--spacing-md);
+    }
+    
+    .meaning {
+        margin-bottom: var(--spacing-sm);
+        word-break: break-word;
+    }
+    
     .button-group {
-        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}
+
+/* Extra small device fixes */
+@media (max-width: 400px) {
+    :root {
+        --font-size-base: 14px;
+    }
+    
+    .site-title {
+        font-size: var(--font-size-base);
+    }
+    
+    .header-container {
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+    
+    #theme-toggle-btn {
+        padding: var(--spacing-xs);
+    }
+    
+    .content-header h2 {
+        font-size: var(--font-size-lg);
     }
     
     .vocabulary-container {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+    
+    .card-front {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--spacing-md);
+    }
+    
+    .toggle-button {
+        align-self: flex-end;
+        margin-top: var(--spacing-sm);
+    }
+    
+    .kanji {
+        font-size: var(--font-size-lg);
+    }
+    
+    /* Fix spacing in mobile nav */
+    .nav-link {
+        padding: var(--spacing-sm) var(--spacing-md);
+        min-height: 40px;
+    }
+    
+    .dropdown-link {
+        padding: var(--spacing-sm) calc(var(--spacing-md) * 2);
+        min-height: 38px;
+    }
+}
+
+/* Add animation for mobile menu */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 

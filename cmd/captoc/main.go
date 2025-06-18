@@ -210,7 +210,15 @@ func processDataFiles(cfg *config.Config) error {
 			continue
 		}
 
-		dirPath := filepath.Join(cfg.DataDir, dir.Name())
+		contentType := dir.Name()
+		
+		// Check if we have configuration for this content type
+		_, exists := cfg.ContentTypes[contentType]
+		if !exists {
+			fmt.Printf("Warning: No configuration found for content type '%s', using default template\n", contentType)
+		}
+
+		dirPath := filepath.Join(cfg.DataDir, contentType)
 		files, err := os.ReadDir(dirPath)
 		if err != nil {
 			return err
@@ -221,13 +229,13 @@ func processDataFiles(cfg *config.Config) error {
 				continue
 			}
 
-			// Skip non-CSV files for now
-			if filepath.Ext(file.Name()) != ".csv" {
+			// Support both CSV and JSON files
+			ext := filepath.Ext(file.Name())
+			if ext != ".csv" && ext != ".json" {
 				continue
 			}
 
 			filePath := filepath.Join(dirPath, file.Name())
-			contentType := dir.Name() // "tuvung" or "nguphap"
 
 			// Parse the file
 			fmt.Printf("  Parsing file: %s\n", filePath)
@@ -238,10 +246,11 @@ func processDataFiles(cfg *config.Config) error {
 			}
 
 			// Generate HTML from template
+			baseName := filepath.Base(file.Name()[:len(file.Name())-len(ext)])
 			outputPath := filepath.Join(
 				cfg.OutputDir,
 				contentType,
-				fmt.Sprintf("%s.html", filepath.Base(file.Name()[:len(file.Name())-len(filepath.Ext(file.Name()))])),
+				fmt.Sprintf("%s.html", baseName),
 			)
 
 			// Create output directory if it doesn't exist
@@ -251,11 +260,10 @@ func processDataFiles(cfg *config.Config) error {
 			}
 
 			// Render template
-			fmt.Printf("  Rendering template for: %s\n", filePath)
+			fmt.Printf("  Rendering template: %s -> %s\n", filePath, outputPath)
 			if err := template.RenderTemplate(contentType, data, outputPath, cfg); err != nil {
-				return fmt.Errorf("failed to render template for %s: %w", filePath, err)
+				return fmt.Errorf("failed to render template %s: %w", filePath, err)
 			}
-			fmt.Printf("  Successfully rendered: %s\n", outputPath)
 		}
 	}
 

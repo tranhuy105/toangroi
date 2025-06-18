@@ -26,19 +26,30 @@ type TemplateData struct {
 	Menu []config.MenuItem
 	// ContentMap for sidebar navigation
 	ContentMap map[string][]string
+	// Content type config for the current content
+	ContentTypeConfig *config.ContentTypeConfig
 }
 
 // RenderTemplate renders a template with the given content data
 func RenderTemplate(contentType string, data *parser.ContentData, outputPath string, cfg *config.Config) error {
-	// Select template file based on content type
-	templateFile := filepath.Join(cfg.TemplateDir, contentType+".html")
-	goTemplateFile := filepath.Join(cfg.TemplateDir, contentType+".gohtml")
+	// Get the content type configuration
+	contentTypeConfig, found := cfg.ContentTypes[contentType]
+	if !found {
+		return fmt.Errorf("content type configuration not found: %s", contentType)
+	}
+	
+	// Determine template name from content type config or fallback to content type
+	templateName := contentTypeConfig.Template
+	if templateName == "" {
+		templateName = contentType
+	}
+
+	// Select template file
+	templateFile := filepath.Join(cfg.TemplateDir, templateName+".gohtml")
 	layoutFile := filepath.Join(cfg.TemplateDir, "layout.gohtml")
 	
-	// Check if the template file exists, first with .gohtml extension then with .html
-	if _, err := os.Stat(goTemplateFile); err == nil {
-		templateFile = goTemplateFile
-	} else if _, err := os.Stat(templateFile); os.IsNotExist(err) {
+	// Check if the template file exists
+	if _, err := os.Stat(templateFile); os.IsNotExist(err) {
 		fmt.Printf("Template file %s not found, falling back to default\n", templateFile)
 		templateFile = filepath.Join(cfg.TemplateDir, "default.gohtml")
 		// If default template doesn't exist either, return an error
@@ -62,12 +73,13 @@ func RenderTemplate(contentType string, data *parser.ContentData, outputPath str
 
 	// Create template data
 	templateData := &TemplateData{
-		Config:     cfg,
-		Content:    data,
-		Title:      fmt.Sprintf("%s - %s", cfg.Name, data.ContentID),
-		Timestamp:  time.Now().Format("2006-01-02 15:04:05"),
-		Menu:       cfg.Menu,
-		ContentMap: contentMap,
+		Config:           cfg,
+		Content:          data,
+		Title:            fmt.Sprintf("%s - %s", cfg.Name, data.ContentID),
+		Timestamp:        time.Now().Format("2006-01-02 15:04:05"),
+		Menu:             cfg.Menu,
+		ContentMap:       contentMap,
+		ContentTypeConfig: &contentTypeConfig,
 	}
 
 	// Parse the templates

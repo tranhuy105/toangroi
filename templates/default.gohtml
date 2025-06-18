@@ -1,68 +1,36 @@
 {{ define "content" }}
 <div class="content-header">
-    <h2>
-        {{ .Content.ContentID }} - {{ .Content.ContentType
-        }}
-    </h2>
+    <h2>{{ .Content.ContentID }} - {{ .ContentTypeConfig.Title }}</h2>
+    <div class="content-controls">
+        {{ if .ContentTypeConfig.ShowSearch }}
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Search..."
+            />
+        </div>
+        {{ end }}
+    </div>
 </div>
 
-<div class="default-container">
-    <div class="data-table">
-        <table>
-            <thead>
-                <tr>
-                    {{ range .Content.Headers }}
-                    <th>{{ . }}</th>
-                    {{ end }}
-                </tr>
-            </thead>
-            <tbody>
-                {{ range .Content.Rows }}
-                <tr>
-                    {{ $row := . }} {{ range
-                    $.Content.Headers }}
-                    <td>{{ index $row . }}</td>
-                    {{ end }}
-                </tr>
+<div class="generic-content-container">
+    {{ range $index, $row := .Content.Rows }}
+    <div class="content-item card" data-index="{{ $index }}">
+        {{ range $fieldName, $fieldValue := $row }}
+            {{ range $field := $.ContentTypeConfig.Fields }}
+                {{ if and (eq $field.Name $fieldName) $field.Display }}
+                <div class="field-container">
+                    <div class="field-label">{{ $field.Label }}:</div>
+                    <div class="field-value">{{ $fieldValue }}</div>
+                </div>
                 {{ end }}
-            </tbody>
-        </table>
+            {{ end }}
+        {{ end }}
     </div>
-
-    <div class="raw-data">
-        <h3>Raw Data</h3>
-        <pre>{{ .Content.RawData }}</pre>
-    </div>
+    {{ end }}
 </div>
 
-<style>
-    .default-container {
-        margin-bottom: 2rem;
-    }
-
-    .data-table {
-        overflow-x: auto;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-    th,
-    td {
-        border: 1px solid var(--card-border);
-        padding: 8px 12px;
-        text-align: left;
-    }
-
-    th {
-        background-color: var(--primary-color);
-        color: white;
-    }
-
-    tr:nth-child(even) {
-        background-color: var(--card-background);
-    }
-</style>
+<script src="{{ .Config.BaseURL }}/static/js/main.js"></script>
 {{ end }}

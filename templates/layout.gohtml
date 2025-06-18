@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta
             name="viewport"
-            content="width=device-width, initial-scale=1.0"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
         <title>{{ .Title }}</title>
         <link
@@ -48,11 +48,20 @@
                         </a>
                     </div>
                     
+                    <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span class="menu-icon"></span>
+                    </button>
+                    
+                    <div class="header-right">
+                        <div class="theme-toggle">
+                            <button id="theme-toggle-btn" aria-label="Toggle dark mode">
+                                <span class="light-icon">☀️</span>
+                                <span class="dark-icon">🌙</span>
+                            </button>
+                        </div>
+                    </div>
+                    
                     <div class="header-nav">
-                        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Toggle menu">
-                            <span class="menu-icon"></span>
-                        </button>
-                        
                         <nav class="main-nav">
                             <ul class="nav-list">
                                 <li class="nav-item {{ if and .Content (eq .Content.ContentID "index") }}active{{ end }}">
@@ -79,13 +88,6 @@
                                 {{ end }}
                             </ul>
                         </nav>
-
-                        <div class="theme-toggle">
-                            <button id="theme-toggle-btn" aria-label="Toggle dark mode">
-                                <span class="light-icon">☀️</span>
-                                <span class="dark-icon">🌙</span>
-                            </button>
-                        </div>
                     </div>
                 </div>
             </header>
@@ -93,57 +95,31 @@
             <main class="main-content">
                 <aside class="sidebar">
                     <nav class="sidebar-nav">
-                        <div class="sidebar-section">
-                            <h3 class="sidebar-title">Từ vựng</h3>
-                            <ul class="sidebar-list">
-                                {{ if .ContentMap }}
-                                    {{ if index .ContentMap "tuvung" }}
-                                        {{ range $index, $id := index .ContentMap "tuvung" }}
-                                        <li class="sidebar-item">
-                                            <a 
-                                                href="{{ $.Config.BaseURL }}/tuvung/{{ $id }}.html" 
-                                                class="sidebar-link {{ if and $.Content (eq $.Content.ContentID $id) }}active{{ end }}"
-                                            >
-                                                {{ $id }}
-                                            </a>
-                                        </li>
+                        {{ range $contentType, $contentConfig := .Config.ContentTypes }}
+                            <div class="sidebar-section">
+                                <h3 class="sidebar-title">{{ $contentConfig.Title }}</h3>
+                                <ul class="sidebar-list">
+                                    {{ if $.ContentMap }}
+                                        {{ if index $.ContentMap $contentType }}
+                                            {{ range $index, $id := index $.ContentMap $contentType }}
+                                            <li class="sidebar-item">
+                                                <a 
+                                                    href="{{ $.Config.BaseURL }}/{{ $contentType }}/{{ $id }}.html" 
+                                                    class="sidebar-link {{ if and $.Content (eq $.Content.ContentID $id) }}active{{ end }}"
+                                                >
+                                                    {{ $id }}
+                                                </a>
+                                            </li>
+                                            {{ end }}
+                                        {{ else }}
+                                            <li class="sidebar-item">
+                                                <span class="sidebar-link disabled">No content available</span>
+                                            </li>
                                         {{ end }}
-                                    {{ else }}
-                                        <li class="sidebar-item">
-                                            <a href="{{ $.Config.BaseURL }}/tuvung/so1.html" class="sidebar-link">
-                                                Từ vựng
-                                            </a>
-                                        </li>
                                     {{ end }}
-                                {{ end }}
-                            </ul>
-                        </div>
-                        
-                        <div class="sidebar-section">
-                            <h3 class="sidebar-title">Ngữ pháp</h3>
-                            <ul class="sidebar-list">
-                                {{ if .ContentMap }}
-                                    {{ if index .ContentMap "nguphap" }}
-                                        {{ range $index, $id := index .ContentMap "nguphap" }}
-                                        <li class="sidebar-item">
-                                            <a 
-                                                href="{{ $.Config.BaseURL }}/nguphap/{{ $id }}.html" 
-                                                class="sidebar-link {{ if and $.Content (eq $.Content.ContentID $id) }}active{{ end }}"
-                                            >
-                                                {{ $id }}
-                                            </a>
-                                        </li>
-                                        {{ end }}
-                                    {{ else }}
-                                        <li class="sidebar-item">
-                                            <a href="{{ $.Config.BaseURL }}/nguphap/so1.html" class="sidebar-link">
-                                                Ngữ pháp
-                                            </a>
-                                        </li>
-                                    {{ end }}
-                                {{ end }}
-                            </ul>
-                        </div>
+                                </ul>
+                            </div>
+                        {{ end }}
                     </nav>
                 </aside>
                 
