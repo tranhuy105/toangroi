@@ -32,6 +32,10 @@ menu:
       url: "/nhatnganhsucvat/tn.html"
       icon: "pen"
       content_type: "nhatnganhsucvat"
+    - label: "KTPM"
+      url: "/ktpm/quiz_0101__attempt_review.html"
+      icon: "book"
+      content_type: "ktpm"
 
 # Content type configurations
 content_types:
@@ -75,6 +79,25 @@ content_types:
 
     nhatnganhsucvat:
         title: "Nhật ngành súc vật"
+        template: "nguphap"
+        show_result_immediately: false
+        highlight_correct: true
+        fields:
+            - name: "Câu số"
+              label: "Question Number"
+              display: true
+            - name: "Câu hỏi"
+              label: "Question"
+              display: true
+            - name: "Đáp án đúng"
+              label: "Correct Answer"
+              display: false
+            - name: "Lựa chọn"
+              label: "Options"
+              display: true
+
+    ktpm:
+        title: "Kĩ thuật phần mềm"
         template: "nguphap"
         show_result_immediately: false
         highlight_correct: true
