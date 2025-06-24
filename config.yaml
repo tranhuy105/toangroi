@@ -20,61 +20,61 @@ theme:
 
 # Navigation menu
 menu:
-    - label: "Từ vựng"
-      url: "/tuvung/n1_1.html"
-      icon: "book"
-      content_type: "tuvung"
-    - label: "Ngữ pháp"
-      url: "/nguphap/so1.html"
-      icon: "pencil"
-      content_type: "nguphap"
-    - label: "Nhật ngành súc vật"
-      url: "/nhatnganhsucvat/tn.html"
+    # - label: "Từ vựng"
+    #   url: "/tuvung/n1_1.html"
+    #   icon: "book"
+    #   content_type: "tuvung"
+    # - label: "Ngữ pháp"
+    #   url: "/nguphap/so1.html"
+    #   icon: "pencil"
+    #   content_type: "nguphap"
+    - label: "Nhật ngành"
+      url: "/nhatnganh/tn.html"
       icon: "pen"
-      content_type: "nhatnganhsucvat"
+      content_type: "nhatnganh"
 
 # Content type configurations
 content_types:
-    tuvung:
-        title: "Từ vựng"
-        template: "tuvung"
-        show_search: true
-        card_layout: "flip" # Options: flip, expand
-        fields:
-            - name: "japanese"
-              label: "Kanji"
-              display: true
-            - name: "reading"
-              label: "Reading"
-              display: true
-            - name: "meaning"
-              label: "Meaning"
-              display: true
-            - name: "sinoVietnamese"
-              label: "Hán Việt"
-              display: true
+    # tuvung:
+    #     title: "Từ vựng"
+    #     template: "tuvung"
+    #     show_search: true
+    #     card_layout: "flip" # Options: flip, expand
+    #     fields:
+    #         - name: "japanese"
+    #           label: "Kanji"
+    #           display: true
+    #         - name: "reading"
+    #           label: "Reading"
+    #           display: true
+    #         - name: "meaning"
+    #           label: "Meaning"
+    #           display: true
+    #         - name: "sinoVietnamese"
+    #           label: "Hán Việt"
+    #           display: true
 
-    nguphap:
-        title: "Ngữ pháp"
-        template: "nguphap"
-        show_result_immediately: false
-        highlight_correct: true
-        fields:
-            - name: "Câu số"
-              label: "Question Number"
-              display: true
-            - name: "Câu hỏi"
-              label: "Question"
-              display: true
-            - name: "Đáp án đúng"
-              label: "Correct Answer"
-              display: false
-            - name: "Lựa chọn"
-              label: "Options"
-              display: true
+    # nguphap:
+    #     title: "Ngữ pháp"
+    #     template: "nguphap"
+    #     show_result_immediately: false
+    #     highlight_correct: true
+    #     fields:
+    #         - name: "Câu số"
+    #           label: "Question Number"
+    #           display: true
+    #         - name: "Câu hỏi"
+    #           label: "Question"
+    #           display: true
+    #         - name: "Đáp án đúng"
+    #           label: "Correct Answer"
+    #           display: false
+    #         - name: "Lựa chọn"
+    #           label: "Options"
+    #           display: true
 
-    nhatnganhsucvat:
-        title: "Nhật ngành súc vật"
+    nhatnganh:
+        title: "Nhật ngành"
         template: "nguphap"
         show_result_immediately: false
         highlight_correct: true
